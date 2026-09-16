@@ -6,7 +6,7 @@ import { FestivalCrowdInstances } from "../dance-crowd";
 import { HardwareBatch, Truss } from "../stage-hardware";
 import { ARENA_BOUNDS, ARENA_CENTER, ARENA_LAYOUT, type ArenaBox, type ArenaVector } from "./arena-layout";
 import { ArenaFans } from "./arena-fans";
-import { ARENA_CUTOUT_BLOCKS, ARENA_FOREGROUND } from "./arena-audience-layout";
+import { ARENA_CUTOUT_BLOCKS, ARENA_FOREGROUND, ARENA_MIDGROUND } from "./arena-audience-layout";
 
 function boxMatrices(boxes: readonly ArenaBox[]) {
   const rotation = new THREE.Quaternion();
@@ -300,6 +300,9 @@ export function EtfcArena() {
         ))}
         <group name="arena-audience-foreground">
           <FestivalCrowdInstances placements={ARENA_FOREGROUND} target={ARENA_CENTER} detail="standard" shadows={false} />
+        </group>
+        <group name="arena-audience-midground">
+          <FestivalCrowdInstances placements={ARENA_MIDGROUND} target={ARENA_CENTER} detail="far" />
         </group>
       </Suspense>
     </group>

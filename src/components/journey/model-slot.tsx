@@ -35,6 +35,8 @@ type ModelSlotProps = {
    * When set, `position`/`rotationY` on the slot itself are ignored.
    */
   instances?: { match: string; position: [number, number, number]; rotationY?: number; mutate?: (root: THREE.Object3D) => void }[];
+  /** Set false so small props skip the sun's shadow pass. Default true. */
+  shadows?: boolean;
 };
 
 const modelChecks = new Map<string, Promise<boolean>>();
@@ -117,7 +119,7 @@ function sanitizeMaterial(material: THREE.Material): THREE.Material {
   return clean;
 }
 
-function GltfModel({ url, fitHeight, mutate }: Pick<ModelSlotProps, "url" | "fitHeight" | "mutate">) {
+function GltfModel({ url, fitHeight, mutate, shadows = true }: Pick<ModelSlotProps, "url" | "fitHeight" | "mutate" | "shadows">) {
   const { scene } = useSceneModel(url);
   const prepared = useMemo(() => {
     // Clone so the same file (e.g. one fighter) can be placed twice independently.
@@ -140,7 +142,7 @@ function GltfModel({ url, fitHeight, mutate }: Pick<ModelSlotProps, "url" | "fit
     root.traverse((node) => {
       if (node instanceof THREE.Camera || node instanceof THREE.Light) junk.push(node);
       if (node instanceof THREE.Mesh) {
-        node.castShadow = true;
+        node.castShadow = shadows;
         node.receiveShadow = true;
         node.material = Array.isArray(node.material)
           ? node.material.map(sharedMaterial)
@@ -151,7 +153,7 @@ function GltfModel({ url, fitHeight, mutate }: Pick<ModelSlotProps, "url" | "fit
     fitToHeight(root, fitHeight);
     mutate?.(root);
     return root;
-  }, [scene, fitHeight, mutate]);
+  }, [scene, fitHeight, mutate, shadows]);
   return <primitive object={prepared} dispose={null} />;
 }
 
@@ -198,7 +200,7 @@ function GltfInstances({ url, fitHeight, instances }: Pick<ModelSlotProps, "url"
   );
 }
 
-export function ModelSlot({ url, fitHeight, position = [0, 0, 0], rotationY = 0, fallback, mutate, instances }: ModelSlotProps) {
+export function ModelSlot({ url, fitHeight, position = [0, 0, 0], rotationY = 0, fallback, mutate, instances, shadows }: ModelSlotProps) {
   const resolvedUrl = journeyModelUrl(url);
   const exists = useModelExists(resolvedUrl);
   if (!exists) return <group position={position} rotation={[0, rotationY, 0]}>{fallback}</group>;
@@ -212,7 +214,7 @@ export function ModelSlot({ url, fitHeight, position = [0, 0, 0], rotationY = 0,
   return (
     <group position={position} rotation={[0, rotationY, 0]}>
       <Suspense fallback={fallback}>
-        <GltfModel url={resolvedUrl} fitHeight={fitHeight} mutate={mutate} />
+        <GltfModel url={resolvedUrl} fitHeight={fitHeight} mutate={mutate} shadows={shadows} />
       </Suspense>
     </group>
   );

@@ -3,7 +3,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { trackAssetDerivative, useSceneModel } from "./scene-assets";
-import { random } from "./camera-path";
+import { random, sampleCamera } from "./camera-path";
 import { facingTarget } from "./posed-people";
 import { FESTIVAL_DANCE_VARIANTS, FESTIVAL_PEOPLE_FAR_URL, FESTIVAL_PEOPLE_URL, festivalPersonParts, type FestivalVariant } from "./festival-person";
 
@@ -14,6 +14,20 @@ const BERMEL_POSES: readonly FestivalVariant[] = [
   "manuel-hands-up", "red-hands-up", "kandace-hands-up",
 ];
 const BERMEL_WARDROBE = ["#35404a", "#5b514a", "#b7ac92", "#2f4138", "#71413b", "#73607b", "#596c79", "#bd925e"];
+
+// The Bermel camera flight (progress 0 → 0.31): orbit the stage, then travel
+// down the crowd's center line. Guests beyond arm's-length of this whole route
+// can never fill the screen, so they render as the decimated far build.
+let bermelRoute: THREE.Vector3[] | null = null;
+function nearBermelRoute(guest: CrowdPlacement) {
+  bermelRoute ??= Array.from({ length: 311 }, (_, index) => {
+    const eye = new THREE.Vector3();
+    sampleCamera(index * 0.001, eye, new THREE.Vector3());
+    return eye;
+  });
+  const chest = new THREE.Vector3(guest.position[0], guest.position[1] + guest.height * 0.6, guest.position[2]);
+  return bermelRoute.some((eye) => eye.distanceToSquared(chest) < 5.5 * 5.5);
+}
 export type CrowdPlacement = { position: [number, number, number]; height: number; variant: number; wardrobe: string };
 type WardrobePart = { geometry: THREE.BufferGeometry; material: THREE.MeshStandardMaterial };
 const wardrobeCache = new WeakMap<THREE.BufferGeometry, WeakMap<THREE.Material, WardrobePart>>();
@@ -170,5 +184,15 @@ export function FestivalCrowd({ count = 520, center, spread, seed = 11, target }
       wardrobe: BERMEL_WARDROBE[Math.floor(random(seed + i + 1900) * BERMEL_WARDROBE.length)],
     };
   }), [count, cx, cz, sx, sz, seed]);
-  return <group name="bermel-static-audience"><FestivalCrowdInstances placements={placements} target={target} shadows={false} variants={BERMEL_POSES} /></group>;
+  // Guests the camera never gets close to use the far build (~5x fewer
+  // triangles); the hall's warm haze hides the difference at that range.
+  const { near, distant } = useMemo(() => {
+    const near: CrowdPlacement[] = [], distant: CrowdPlacement[] = [];
+    for (const guest of placements) (nearBermelRoute(guest) ? near : distant).push(guest);
+    return { near, distant };
+  }, [placements]);
+  return <group name="bermel-static-audience">
+    <FestivalCrowdInstances placements={near} target={target} shadows={false} variants={BERMEL_POSES} />
+    <FestivalCrowdInstances placements={distant} target={target} detail="far" variants={BERMEL_POSES} />
+  </group>;
 }

@@ -168,12 +168,12 @@ export function Fire({ position, scale = 1, seed = 0 }: { position: [number, num
     <group position={position} scale={scale}>
       {Array.from({ length: 10 }, (_, i) => {
         const a = i / 10 * Math.PI * 2;
-        return <mesh key={i} position={[Math.cos(a) * 0.55, 0.1, Math.sin(a) * 0.55]} scale={[0.19, 0.13, 0.16]} rotation={[0, a, 0]} castShadow receiveShadow>
+        return <mesh key={i} position={[Math.cos(a) * 0.55, 0.1, Math.sin(a) * 0.55]} scale={[0.19, 0.13, 0.16]} rotation={[0, a, 0]} receiveShadow>
           <dodecahedronGeometry args={[1, 1]} /><meshStandardMaterial color={i % 2 ? "#696055" : "#4c4841"} roughness={1} />
         </mesh>;
       })}
       {[0.3, 2.2, 4.1].map((a, i) => (
-        <mesh key={a} position={[0, 0.12 + i * 0.035, 0]} rotation={[Math.PI / 2, 0, a]} castShadow>
+        <mesh key={a} position={[0, 0.12 + i * 0.035, 0]} rotation={[Math.PI / 2, 0, a]}>
           <cylinderGeometry args={[0.07, 0.095, 0.8, 9]} />
           <meshStandardMaterial color="#282019" emissive="#b83f0e" emissiveIntensity={0.28} roughness={1} />
         </mesh>
@@ -243,7 +243,7 @@ export function Rocks({ center, count = 8, spread = 20, seed = 0 }: { center: [n
   return (
     <group>
       {rocks.map((rock, i) => (
-        <mesh key={i} position={[rock.x, rock.s * 0.4, rock.z]} rotation={[0, rock.r, 0]} scale={[rock.s, rock.s * 0.7, rock.s]} castShadow>
+        <mesh key={i} position={[rock.x, rock.s * 0.4, rock.z]} rotation={[0, rock.r, 0]} scale={[rock.s, rock.s * 0.7, rock.s]}>
           <dodecahedronGeometry args={[1, 0]} />
           <meshStandardMaterial color={i % 2 ? "#7a6a52" : "#6b5c46"} roughness={1} />
         </mesh>

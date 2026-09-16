@@ -4,8 +4,10 @@ import { Suspense, useLayoutEffect, useMemo, useRef, type ReactNode } from "reac
 import * as THREE from "three";
 import { trackAssetDerivative, useSceneModel } from "./scene-assets";
 
-export const FESTIVAL_PEOPLE_URL = "/models/festival-people.glb";
-export const FESTIVAL_PEOPLE_HERO_URL = "/models/festival-people-hero.glb";
+// The shared-people builds keep the original geometry but reference one pooled
+// set of ten images, so hero + standard decode each texture once, not twice.
+export const FESTIVAL_PEOPLE_URL = "/models/shared-people/standard.glb";
+export const FESTIVAL_PEOPLE_HERO_URL = "/models/shared-people/hero.glb";
 export const FESTIVAL_PEOPLE_FAR_URL = "/models/festival-people-far.glb";
 export const FESTIVAL_PERSON_LOD_DISTANCE = 12;
 export const FESTIVAL_VARIANTS = [

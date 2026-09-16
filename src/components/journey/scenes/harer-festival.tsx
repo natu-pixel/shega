@@ -63,7 +63,7 @@ function TereSigaPlatter({ position, rotation = 0 }: { position: [number, number
     <group position={position} rotation={[0, rotation, 0]}>
       {/* low table */}
       <mesh position={[0, 0.81, 0]} receiveShadow><cylinderGeometry args={[1.15, 1.15, 0.08, 40]} /><primitive object={woodMat} attach="material" /></mesh>
-      <mesh position={[0, 0.4, 0]} castShadow><cylinderGeometry args={[0.16, 0.24, 0.8, 12]} /><primitive object={darkWoodMat} attach="material" /></mesh>
+      <mesh position={[0, 0.4, 0]}><cylinderGeometry args={[0.16, 0.24, 0.8, 12]} /><primitive object={darkWoodMat} attach="material" /></mesh>
       <mesh position={[0, 0.06, 0]}><cylinderGeometry args={[0.48, 0.54, 0.12, 20]} /><primitive object={darkWoodMat} attach="material" /></mesh>
       <mesh position={[0, 0.865, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[1.02, 0.022, 8, 48]} /><meshStandardMaterial color="#a5a397" metalness={0.85} roughness={0.35} /></mesh>
       {/* injera base */}
@@ -115,7 +115,7 @@ function HeroGrill({ position }: { position: [number, number, number] }) {
       <ModelSlot url="/models/grill.glb" fitHeight={0.86} rotationY={Math.PI / 2} fallback={proceduralGrill} />
       {/* The scan is a thin cut: scale by its thickness, not a whole roast's height. */}
       {Array.from({ length: 6 }, (_, i) => (
-        <ModelSlot key={i} url="/models/meat.glb" fitHeight={0.048}
+        <ModelSlot key={i} url="/models/meat.glb" fitHeight={0.048} shadows={false}
           position={[-0.76 + (i % 3) * 0.72, 0.86, -0.28 + Math.floor(i / 3) * 0.54]}
           rotationY={random(i + 90) * Math.PI} fallback={i === 0 ? proceduralMeat : null} />
       ))}
@@ -222,7 +222,7 @@ export function HarerFestival({ store }: { store: JourneyStore }) {
       {lanterns.map((pos, i) => (
         <group key={i}>
           <Lantern position={pos} seed={i * 3} />
-          <mesh position={[pos[0] + 0.38, (pos[1] + 1) / 2, pos[2]]} castShadow>
+          <mesh position={[pos[0] + 0.38, (pos[1] + 1) / 2, pos[2]]}>
             <cylinderGeometry args={[0.035, 0.055, pos[1] + 1, 10]} /><primitive object={darkWoodMat} attach="material" />
           </mesh>
           <mesh position={[pos[0] + 0.18, pos[1] + 1, pos[2]]}>

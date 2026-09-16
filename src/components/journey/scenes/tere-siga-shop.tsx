@@ -41,7 +41,7 @@ function HangingBeef({ variation }: { variation: number }) {
     return beefGeometry(shape, 0.15);
   }, []);
   useEffect(() => () => geometry.dispose(), [geometry]);
-  return <mesh geometry={geometry} position={[0, -0.56, -0.08]} rotation={[0, variation * 0.11, variation * 0.045]} scale={[1 + variation * 0.08, 1, 1]} castShadow receiveShadow>
+  return <mesh geometry={geometry} position={[0, -0.56, -0.08]} rotation={[0, variation * 0.11, variation * 0.045]} scale={[1 + variation * 0.08, 1, 1]} receiveShadow>
     <meshStandardMaterial attach="material-0" map={map} bumpMap={map} bumpScale={0.003} roughness={0.5} color="#d2c7bd" />
     <meshStandardMaterial attach="material-1" color="#bc8d43" roughness={0.58} />
   </mesh>;
@@ -61,7 +61,7 @@ export function RawBeef({ position, scale = [1, 1, 1], rotation = 0 }: {
   }, []);
   useEffect(() => () => geometry.dispose(), [geometry]);
   return <group position={position} scale={scale} rotation={[0, rotation, 0]}>
-    <mesh geometry={geometry} rotation={[-Math.PI / 2, 0, 0]} castShadow receiveShadow>
+    <mesh geometry={geometry} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
       <meshStandardMaterial attach="material-0" map={map} bumpMap={map} bumpScale={0.002} color="#d7c8bb" roughness={0.5} />
       <meshStandardMaterial attach="material-1" color="#812b2c" roughness={0.53} />
     </mesh>
@@ -97,7 +97,7 @@ export function TereSigaShop() {
     <ShopSign />
     <mesh position={[0, 0.5, 0.24]}><boxGeometry args={[4.35, 1, 1.1]} /><meshStandardMaterial color="#7a2926" roughness={0.8} /></mesh>
     <mesh position={[0, 1.03, 0.24]} material={steel} receiveShadow><boxGeometry args={[4.55, 0.075, 1.24]} /></mesh>
-    <mesh position={[-0.35, 1.115, 0.26]} material={timber} castShadow><boxGeometry args={[1.1, 0.12, 0.7]} /></mesh>
+    <mesh position={[-0.35, 1.115, 0.26]} material={timber}><boxGeometry args={[1.1, 0.12, 0.7]} /></mesh>
     <RawBeef position={[-0.35, 1.18, 0.25]} scale={[1.25, 1.6, 1.1]} rotation={0.2} />
     {[0, 1, 2].map((i) => <group key={i} position={[0.65 + i * 0.5, 1.09, 0.2]}>
       <mesh material={steel}><boxGeometry args={[0.46, 0.03, 0.75]} /></mesh>

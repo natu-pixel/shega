@@ -26,7 +26,7 @@ export function Drink({ kind }: { kind: "beer" | "glass" }) {
   ], []);
   if (kind === "beer") return (
     <group>
-      <mesh castShadow><latheGeometry args={[profile, 20]} /><meshStandardMaterial color="#49311b" roughness={0.2} metalness={0.12} /></mesh>
+      <mesh><latheGeometry args={[profile, 20]} /><meshStandardMaterial color="#49311b" roughness={0.2} metalness={0.12} /></mesh>
       <mesh position={[0, 0.005, 0]}>
         <cylinderGeometry args={[0.048, 0.048, 0.11, 20, 1, true]} />
         <meshStandardMaterial color="#e4d6b4" roughness={0.7} side={THREE.DoubleSide} />
@@ -65,7 +65,7 @@ function PosedGuest({ spec }: { spec: PersonSpec }) {
       {(anchors) => <>
         {spec.drink && <group position={anchors.rightHand} scale={1 / height}><Drink kind={spec.drink} /></group>}
         {spec.role === "chef" && <group name="chef-uniform">
-          <mesh position={[anchors.chest[0], 0, anchors.chest[2] + 0.065]} castShadow>
+          <mesh position={[anchors.chest[0], 0, anchors.chest[2] + 0.065]}>
             <shapeGeometry args={[apron]} /><meshStandardMaterial color="#c7b99d" roughness={1} side={THREE.DoubleSide} />
           </mesh>
           <mesh position={[anchors.chest[0], 0.76, anchors.chest[2] + 0.065]}>
