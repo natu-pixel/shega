@@ -1,0 +1,150 @@
+{
+  "file": "/models/lite/fighter.glb",
+  "original": "/fighter.glb",
+  "attribution": {
+    "author": "mortaleiros (https://sketchfab.com/mortaleiros)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2",
+    "title": "MMA Ground and Pound"
+  },
+  "sourceAssetMetadata": {
+    "generator": "glTF-Transform v4.5.0",
+    "version": "2.0",
+    "extras": {
+      "author": "mortaleiros (https://sketchfab.com/mortaleiros)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2",
+      "title": "MMA Ground and Pound"
+    }
+  },
+  "changes": [
+    "Textures resized to at most 768px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+    "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+  ],
+  "sourceSHA256": "02b391afb0a4eed3a9520c9197175756f4188922c417319057ca6142c0c7481c",
+  "outputSHA256": "38453b84391af38790521ae5b06d46ad5eb5d0fd38ebb3e7fdb897612fec406e",
+  "before": {
+    "fileBytes": 6247128,
+    "triangles": 41968,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 1158887,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 1190297,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 1184531,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      }
+    ],
+    "decodedRGBABytes": 12582912,
+    "decodedRGBAWithMipmapsBytes": 16777212
+  },
+  "after": {
+    "fileBytes": 4185340,
+    "triangles": 41968,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 521326,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 488018,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 462398,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      }
+    ],
+    "decodedRGBABytes": 7077888,
+    "decodedRGBAWithMipmapsBytes": 9437160
+  },
+  "geometry": [],
+  "verification": {
+    "gltfLoader": "passed",
+    "imageDecode": "passed",
+    "exactNodeMetadata": true,
+    "sourceBounds": {
+      "min": [
+        -184.9688720703125,
+        -6.067036156509199,
+        -123.15355935105728
+      ],
+      "max": [
+        193.35394287109375,
+        66.53902072134171,
+        255.1693072365263
+      ]
+    },
+    "outputBounds": {
+      "min": [
+        -184.9688720703125,
+        -6.067036156509199,
+        -123.15355935105728
+      ],
+      "max": [
+        193.35394287109375,
+        66.53902072134171,
+        255.1693072365263
+      ]
+    },
+    "maxBoundsDelta": 0,
+    "sampledClips": 1,
+    "clipSamples": [
+      {
+        "name": "Take 001",
+        "duration": 7.233333110809326,
+        "tracks": 386,
+        "times": [
+          0,
+          1.8083332777023315,
+          3.616666555404663,
+          5.424999833106995,
+          7.233332110809326
+        ]
+      }
+    ],
+    "exactAccessors": 494,
+    "performerGeometryAndAnimationUnchanged": true
+  }
+}

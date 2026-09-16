@@ -1,0 +1,831 @@
+{
+  "description": "Lightweight local alternatives for the cinematic journey. Originals remain available for higher detail.",
+  "generator": "scripts\\prepare-journey-lite.mjs",
+  "originalAttributionManifest": "/models/scene-models.attribution.json",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "memoryEstimate": "Unique embedded images, decoded as RGBA8. Mip estimate sums each level down to 1x1; excludes driver alignment, duplicate texture instances, geometry, framebuffer and renderer overhead. WebP only reduces transfer bytes; resized dimensions provide GPU-memory savings.",
+  "totals": {
+    "before": {
+      "fileBytes": 34345284,
+      "triangles": 403135,
+      "decodedRGBABytes": 63963136,
+      "decodedRGBAWithMipmapsBytes": 85284164
+    },
+    "after": {
+      "fileBytes": 10477260,
+      "triangles": 90694,
+      "decodedRGBABytes": 25165824,
+      "decodedRGBAWithMipmapsBytes": 33554368
+    }
+  },
+  "assets": [
+    {
+      "file": "/models/lite/acacia-single.glb",
+      "original": "/models/acacia-single.glb",
+      "attribution": {
+        "author": "evolveduk (https://sketchfab.com/evolveduk)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/acacia-tree-bb14c2bb679b4d0bb1c578a27e2ddabf",
+        "title": "Acacia tree"
+      },
+      "sourceAssetMetadata": {
+        "extras": {
+          "author": "evolveduk (https://sketchfab.com/evolveduk)",
+          "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+          "source": "https://sketchfab.com/3d-models/acacia-tree-bb14c2bb679b4d0bb1c578a27e2ddabf",
+          "title": "Acacia tree"
+        },
+        "generator": "Sketchfab-16.15.0",
+        "version": "2.0"
+      },
+      "changes": [
+        "Textures resized to at most 512px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+        "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+      ],
+      "sourceSHA256": "a35d070f1c360c10bc4636d014a7bfc63bb7674b216d40516dc9a4bba908bb9b",
+      "outputSHA256": "d8a102d9158bd2c2e767b84bfb8ea52d4b8ddb56028a3b084e3ed81ec29e781d",
+      "before": {
+        "fileBytes": 7870508,
+        "triangles": 8123,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 2205448,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 725713,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 2276287,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 3,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 1055305,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 4,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 252218,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 5,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 970349,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          }
+        ],
+        "decodedRGBABytes": 25165824,
+        "decodedRGBAWithMipmapsBytes": 33554424
+      },
+      "after": {
+        "fileBytes": 1998844,
+        "triangles": 8123,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 402994,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 187030,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 597138,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 3,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 121994,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 4,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 69378,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 5,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 234866,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          }
+        ],
+        "decodedRGBABytes": 6291456,
+        "decodedRGBAWithMipmapsBytes": 8388600
+      },
+      "geometry": [],
+      "verification": {
+        "gltfLoader": "passed",
+        "imageDecode": "passed",
+        "exactNodeMetadata": true,
+        "sourceBounds": {
+          "min": [
+            -6.418279885837137,
+            -0.0001477999952182174,
+            -4.838745314208893
+          ],
+          "max": [
+            6.382795877841204,
+            6.904692838832148,
+            5.551931638599967
+          ]
+        },
+        "outputBounds": {
+          "min": [
+            -6.418279885837137,
+            -0.0001477999952182174,
+            -4.838745314208893
+          ],
+          "max": [
+            6.382795877841204,
+            6.904692838832148,
+            5.551931638599967
+          ]
+        },
+        "maxBoundsDelta": 0,
+        "sampledClips": 0,
+        "clipSamples": [],
+        "exactAccessors": 10
+      }
+    },
+    {
+      "file": "/models/lite/meat.glb",
+      "original": "/models/meat.glb",
+      "attribution": {
+        "author": "usefulspunforsup (https://sketchfab.com/noemyssima7)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/grilled-chicken-steak-9797e54671094233bcfa469f616bd7df",
+        "title": "Grilled Chicken Steak"
+      },
+      "sourceAssetMetadata": {
+        "extras": {
+          "author": "usefulspunforsup (https://sketchfab.com/noemyssima7)",
+          "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+          "source": "https://sketchfab.com/3d-models/grilled-chicken-steak-9797e54671094233bcfa469f616bd7df",
+          "title": "Grilled Chicken Steak"
+        },
+        "generator": "Sketchfab-14.55.0",
+        "version": "2.0"
+      },
+      "changes": [
+        "Textures resized to at most 512px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+        "Static mesh simplified with authored normals/UVs retained and local/world bounds extrema locked; scene transforms and names unchanged."
+      ],
+      "sourceSHA256": "2e86cce836911e7b3c387b7664fc889724bc4c86ec3e66a6a0f23b5806e47284",
+      "outputSHA256": "a8745cda592048debbcbd02782a9a6db00d9ae80f5b67a337cd8a4ebd1d81ea6",
+      "before": {
+        "fileBytes": 15127184,
+        "triangles": 326432,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 512,
+            "fileBytes": 535243,
+            "decodedRGBABytes": 2097152,
+            "decodedRGBAWithMipmapsBytes": 2796204
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 512,
+            "fileBytes": 192587,
+            "decodedRGBABytes": 2097152,
+            "decodedRGBAWithMipmapsBytes": 2796204
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 512,
+            "fileBytes": 975445,
+            "decodedRGBABytes": 2097152,
+            "decodedRGBAWithMipmapsBytes": 2796204
+          }
+        ],
+        "decodedRGBABytes": 6291456,
+        "decodedRGBAWithMipmapsBytes": 8388612
+      },
+      "after": {
+        "fileBytes": 989116,
+        "triangles": 13991,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 256,
+            "fileBytes": 128106,
+            "decodedRGBABytes": 524288,
+            "decodedRGBAWithMipmapsBytes": 699052
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 256,
+            "fileBytes": 61200,
+            "decodedRGBABytes": 524288,
+            "decodedRGBAWithMipmapsBytes": 699052
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 512,
+            "height": 256,
+            "fileBytes": 262446,
+            "decodedRGBABytes": 524288,
+            "decodedRGBAWithMipmapsBytes": 699052
+          }
+        ],
+        "decodedRGBABytes": 1572864,
+        "decodedRGBAWithMipmapsBytes": 2097156
+      },
+      "geometry": [
+        {
+          "mesh": 0,
+          "before": 129673,
+          "after": 5559,
+          "measuredError": 0.0011952660279348493
+        },
+        {
+          "mesh": 1,
+          "before": 125890,
+          "after": 5394,
+          "measuredError": 0.0011957973474636674
+        },
+        {
+          "mesh": 2,
+          "before": 70869,
+          "after": 3038,
+          "measuredError": 0.0009278602083213627
+        }
+      ],
+      "verification": {
+        "gltfLoader": "passed",
+        "imageDecode": "passed",
+        "exactNodeMetadata": true,
+        "sourceBounds": {
+          "min": [
+            -0.7070084467542721,
+            -0.05470291999713124,
+            -0.8287128433171411
+          ],
+          "max": [
+            0.5278227336513878,
+            0.09305705980402892,
+            1.008810814299597
+          ]
+        },
+        "outputBounds": {
+          "min": [
+            -0.7070084467542721,
+            -0.05470291999713124,
+            -0.8287128433171411
+          ],
+          "max": [
+            0.5278227336513878,
+            0.09305705980402892,
+            1.008810814299597
+          ]
+        },
+        "maxBoundsDelta": 0,
+        "sampledClips": 0,
+        "clipSamples": [],
+        "exactAccessors": 0
+      }
+    },
+    {
+      "file": "/models/lite/grill.glb",
+      "original": "/models/grill.glb",
+      "attribution": {
+        "author": "Guy in a Poncho (https://sketchfab.com/ponchoguy)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/bonfire-grill-1033ff4c08df4e338b3e17d945372c30",
+        "title": "Bonfire Grill"
+      },
+      "sourceAssetMetadata": {
+        "extras": {
+          "author": "Guy in a Poncho (https://sketchfab.com/ponchoguy)",
+          "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+          "source": "https://sketchfab.com/3d-models/bonfire-grill-1033ff4c08df4e338b3e17d945372c30",
+          "title": "Bonfire Grill"
+        },
+        "generator": "Sketchfab-16.72.0",
+        "version": "2.0"
+      },
+      "changes": [
+        "Textures resized to at most 256px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+        "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+      ],
+      "sourceSHA256": "25ae74ab6606ce8c4f482963972e8025bb9d0193fe58bd8ca4de8ca32841984f",
+      "outputSHA256": "0a0ef5b5f6218675f94147a74731ead4f26f22da9f1f42d565f1232079d8bb15",
+      "before": {
+        "fileBytes": 1194376,
+        "triangles": 3216,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 336495,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 327017,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 512,
+            "height": 512,
+            "fileBytes": 190225,
+            "decodedRGBABytes": 1048576,
+            "decodedRGBAWithMipmapsBytes": 1398100
+          }
+        ],
+        "decodedRGBABytes": 3145728,
+        "decodedRGBAWithMipmapsBytes": 4194300
+      },
+      "after": {
+        "fileBytes": 532328,
+        "triangles": 3216,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 256,
+            "height": 256,
+            "fileBytes": 70586,
+            "decodedRGBABytes": 262144,
+            "decodedRGBAWithMipmapsBytes": 349524
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 256,
+            "height": 256,
+            "fileBytes": 72490,
+            "decodedRGBABytes": 262144,
+            "decodedRGBAWithMipmapsBytes": 349524
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 256,
+            "height": 256,
+            "fileBytes": 48510,
+            "decodedRGBABytes": 262144,
+            "decodedRGBAWithMipmapsBytes": 349524
+          }
+        ],
+        "decodedRGBABytes": 786432,
+        "decodedRGBAWithMipmapsBytes": 1048572
+      },
+      "geometry": [],
+      "verification": {
+        "gltfLoader": "passed",
+        "imageDecode": "passed",
+        "exactNodeMetadata": true,
+        "sourceBounds": {
+          "min": [
+            -0.29387908517094496,
+            0.0006850622285660612,
+            -0.5580823896821488
+          ],
+          "max": [
+            0.29387908517094496,
+            0.37132944929530126,
+            0.5580821568855818
+          ]
+        },
+        "outputBounds": {
+          "min": [
+            -0.29387908517094496,
+            0.0006850622285660612,
+            -0.5580823896821488
+          ],
+          "max": [
+            0.29387908517094496,
+            0.37132944929530126,
+            0.5580821568855818
+          ]
+        },
+        "maxBoundsDelta": 0,
+        "sampledClips": 0,
+        "clipSamples": [],
+        "exactAccessors": 7
+      }
+    },
+    {
+      "file": "/models/lite/guitarist.glb",
+      "original": "/models/guitarist.glb",
+      "attribution": {
+        "author": "LasquetiSpice (https://sketchfab.com/LasquetiSpice)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/animated-musical-trem-playing-guitar-loop-7dde986b68834de6b5a9deff6819d3f1",
+        "title": "Animated Musical Trem Playing Guitar Loop"
+      },
+      "sourceAssetMetadata": {
+        "extras": {
+          "author": "LasquetiSpice (https://sketchfab.com/LasquetiSpice)",
+          "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+          "source": "https://sketchfab.com/3d-models/animated-musical-trem-playing-guitar-loop-7dde986b68834de6b5a9deff6819d3f1",
+          "title": "Animated Musical Trem Playing Guitar Loop"
+        },
+        "generator": "Sketchfab-12.74.0",
+        "version": "2.0"
+      },
+      "changes": [
+        "Textures resized to at most 768px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+        "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+      ],
+      "sourceSHA256": "8401ebbe777e4531913084c187b0d0dfa23f4bc31cbcb28a5d3deee68a103e51",
+      "outputSHA256": "293e816f56cf7dc8a3fbb2fe7a7385e98197cef5731708d4cc591d91a3f513a4",
+      "before": {
+        "fileBytes": 3906088,
+        "triangles": 23396,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 1041857,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 951213,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 332541,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 3,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 108251,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          }
+        ],
+        "decodedRGBABytes": 16777216,
+        "decodedRGBAWithMipmapsBytes": 22369616
+      },
+      "after": {
+        "fileBytes": 2771632,
+        "triangles": 23396,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 506300,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 474330,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 234996,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          },
+          {
+            "index": 3,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 84106,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          }
+        ],
+        "decodedRGBABytes": 9437184,
+        "decodedRGBAWithMipmapsBytes": 12582880
+      },
+      "geometry": [],
+      "verification": {
+        "gltfLoader": "passed",
+        "imageDecode": "passed",
+        "exactNodeMetadata": true,
+        "sourceBounds": {
+          "min": [
+            -1.4701304012739451,
+            -0.0021469548759413546,
+            -0.25083626678818854
+          ],
+          "max": [
+            1.4591044002681826,
+            2.9765459507726417,
+            0.9434776138387447
+          ]
+        },
+        "outputBounds": {
+          "min": [
+            -1.4701304012739451,
+            -0.0021469548759413546,
+            -0.25083626678818854
+          ],
+          "max": [
+            1.4591044002681826,
+            2.9765459507726417,
+            0.9434776138387447
+          ]
+        },
+        "maxBoundsDelta": 0,
+        "sampledClips": 1,
+        "clipSamples": [
+          {
+            "name": "Animation",
+            "duration": 5.4666666984558105,
+            "tracks": 90,
+            "times": [
+              0,
+              1.3666666746139526,
+              2.7333333492279053,
+              4.100000023841858,
+              5.46666569845581
+            ]
+          }
+        ],
+        "exactAccessors": 195,
+        "performerGeometryAndAnimationUnchanged": true
+      }
+    },
+    {
+      "file": "/models/lite/fighter.glb",
+      "original": "/fighter.glb",
+      "attribution": {
+        "author": "mortaleiros (https://sketchfab.com/mortaleiros)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2",
+        "title": "MMA Ground and Pound"
+      },
+      "sourceAssetMetadata": {
+        "generator": "glTF-Transform v4.5.0",
+        "version": "2.0",
+        "extras": {
+          "author": "mortaleiros (https://sketchfab.com/mortaleiros)",
+          "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+          "source": "https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2",
+          "title": "MMA Ground and Pound"
+        }
+      },
+      "changes": [
+        "Textures resized to at most 768px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+        "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+      ],
+      "sourceSHA256": "02b391afb0a4eed3a9520c9197175756f4188922c417319057ca6142c0c7481c",
+      "outputSHA256": "38453b84391af38790521ae5b06d46ad5eb5d0fd38ebb3e7fdb897612fec406e",
+      "before": {
+        "fileBytes": 6247128,
+        "triangles": 41968,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 1158887,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 1190297,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/png",
+            "width": 1024,
+            "height": 1024,
+            "fileBytes": 1184531,
+            "decodedRGBABytes": 4194304,
+            "decodedRGBAWithMipmapsBytes": 5592404
+          }
+        ],
+        "decodedRGBABytes": 12582912,
+        "decodedRGBAWithMipmapsBytes": 16777212
+      },
+      "after": {
+        "fileBytes": 4185340,
+        "triangles": 41968,
+        "images": [
+          {
+            "index": 0,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 521326,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          },
+          {
+            "index": 1,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 488018,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          },
+          {
+            "index": 2,
+            "name": "",
+            "mimeType": "image/webp",
+            "width": 768,
+            "height": 768,
+            "fileBytes": 462398,
+            "decodedRGBABytes": 2359296,
+            "decodedRGBAWithMipmapsBytes": 3145720
+          }
+        ],
+        "decodedRGBABytes": 7077888,
+        "decodedRGBAWithMipmapsBytes": 9437160
+      },
+      "geometry": [],
+      "verification": {
+        "gltfLoader": "passed",
+        "imageDecode": "passed",
+        "exactNodeMetadata": true,
+        "sourceBounds": {
+          "min": [
+            -184.9688720703125,
+            -6.067036156509199,
+            -123.15355935105728
+          ],
+          "max": [
+            193.35394287109375,
+            66.53902072134171,
+            255.1693072365263
+          ]
+        },
+        "outputBounds": {
+          "min": [
+            -184.9688720703125,
+            -6.067036156509199,
+            -123.15355935105728
+          ],
+          "max": [
+            193.35394287109375,
+            66.53902072134171,
+            255.1693072365263
+          ]
+        },
+        "maxBoundsDelta": 0,
+        "sampledClips": 1,
+        "clipSamples": [
+          {
+            "name": "Take 001",
+            "duration": 7.233333110809326,
+            "tracks": 386,
+            "times": [
+              0,
+              1.8083332777023315,
+              3.616666555404663,
+              5.424999833106995,
+              7.233332110809326
+            ]
+          }
+        ],
+        "exactAccessors": 494,
+        "performerGeometryAndAnimationUnchanged": true
+      }
+    }
+  ]
+}

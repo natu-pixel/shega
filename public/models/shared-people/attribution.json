@@ -1,0 +1,3986 @@
+{
+  "schemaVersion": 1,
+  "license": "CC-BY-4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sources": [
+    {
+      "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+      "title": "Manuel Animated 001 - 3D Dancing Man"
+    },
+    {
+      "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+      "title": "Woman In Red"
+    },
+    {
+      "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+      "title": "Kandace Dancing"
+    }
+  ],
+  "modifications": "Geometry, accessor payloads, material settings, static poses and all anchors are unchanged. Only embedded images are externalized, bufferView references/offsets are repacked, and texture sources/cache-key extras are normalized. Standard now uses the original, higher-quality hero JPEG/PNG image bytes without re-encoding.",
+  "generation": "node scripts\\prepare-shared-people.mjs",
+  "verification": "node scripts\\prepare-shared-people.mjs --verify",
+  "runtime": {
+    "cacheKey": "textures[index].extras.shegaSharedTexture",
+    "loader": "GLTFParser.loadTexture(index); direct texture.source and sibling relative image URI, no EXT_texture_webp dependency",
+    "cacheKeyIdentity": "v1 + original hero compressed-image SHA256 + effective mag/min filters + wrapS/wrapT + slot color space + UV channel + texture-transform SHA256",
+    "ownership": "Both asset profiles must retain pooled textures until their last asset owner releases them.",
+    "colorSpace": "srgb for baseColorTexture/emissiveTexture; linear (THREE.NoColorSpace) for data slots",
+    "cloneFreeTextureUsage": {
+      "texCoord": 0,
+      "textureTransforms": 0,
+      "textureCountPerProfile": 10,
+      "colorSpaceTextureCountsPerProfile": {
+        "srgb": 10,
+        "linear": 0
+      }
+    }
+  },
+  "budgets": {
+    "sharedImages": 10,
+    "sharedTextureBytes": 5100000,
+    "sharedDecodedRgbaMipBytes": 40000000,
+    "combinedAssetBytes": 13000000,
+    "posesPerProfile": 12,
+    "profiles": {
+      "hero": {
+        "glbBytes": 6150000,
+        "trianglesPerPose": 24000
+      },
+      "standard": {
+        "glbBytes": 1700000,
+        "trianglesPerPose": 5000
+      }
+    }
+  },
+  "totals": {
+    "sharedImages": 10,
+    "sharedTextureBytes": 5081888,
+    "sharedDecodedRgbaMipBytes": 39146824,
+    "originalDecodedRgbaMipBytes": 78293648,
+    "decodedRgbaMipBytesSaved": 39146824,
+    "originalAssetBytes": 13768608,
+    "combinedAssetBytes": 12792444,
+    "assetBytesSaved": 976164,
+    "decodedMipCalculation": "Exact RGBA8 sum from full-size level through 1x1, excluding driver/JS overhead"
+  },
+  "images": [
+    {
+      "index": 0,
+      "sha256": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4",
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "uri": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4.jpg",
+      "decodedRgbaMipBytes": 5592404,
+      "bytes": 673743
+    },
+    {
+      "index": 1,
+      "sha256": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5",
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "uri": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5.jpg",
+      "decodedRgbaMipBytes": 5592404,
+      "bytes": 720925
+    },
+    {
+      "index": 2,
+      "sha256": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9",
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "uri": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9.png",
+      "decodedRgbaMipBytes": 5592404,
+      "bytes": 14542
+    },
+    {
+      "index": 3,
+      "sha256": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a",
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "uri": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a.png",
+      "decodedRgbaMipBytes": 5592404,
+      "bytes": 647330
+    },
+    {
+      "index": 4,
+      "sha256": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9",
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "uri": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9.png",
+      "decodedRgbaMipBytes": 5592404,
+      "bytes": 1010262
+    },
+    {
+      "index": 5,
+      "sha256": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2",
+      "width": 1024,
+      "height": 1024,
+      "mimeType": "image/png",
+      "uri": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2.png",
+      "decodedRgbaMipBytes": 5592404,
+      "bytes": 894163
+    },
+    {
+      "index": 6,
+      "sha256": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44",
+      "width": 512,
+      "height": 512,
+      "mimeType": "image/png",
+      "uri": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44.png",
+      "decodedRgbaMipBytes": 1398100,
+      "bytes": 414062
+    },
+    {
+      "index": 7,
+      "sha256": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c",
+      "width": 512,
+      "height": 512,
+      "mimeType": "image/png",
+      "uri": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c.png",
+      "decodedRgbaMipBytes": 1398100,
+      "bytes": 329867
+    },
+    {
+      "index": 8,
+      "sha256": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51",
+      "width": 512,
+      "height": 512,
+      "mimeType": "image/png",
+      "uri": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51.png",
+      "decodedRgbaMipBytes": 1398100,
+      "bytes": 322770
+    },
+    {
+      "index": 9,
+      "sha256": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4",
+      "width": 512,
+      "height": 512,
+      "mimeType": "image/png",
+      "uri": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4.png",
+      "decodedRgbaMipBytes": 1398100,
+      "bytes": 54224
+    }
+  ],
+  "materialTextureMapping": [
+    {
+      "material": "rp_manuel_animated_001_mat",
+      "heroMaterialIndex": 0,
+      "standardMaterialIndex": 0,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 0,
+          "standardTextureIndex": 0,
+          "heroImageIndex": 0,
+          "standardImageIndex": 0,
+          "heroImageSha256": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4",
+          "standardImageSha256": "2f29f8681659b04ccc8d41245a18943f038cab0ecc8ac935a7c5e7cb476342ee",
+          "sharedImageUri": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4.jpg",
+          "sharedTextureKey": "shega-shared-people:v1:b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "f_dress_01",
+      "heroMaterialIndex": 1,
+      "standardMaterialIndex": 1,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 1,
+          "standardTextureIndex": 1,
+          "heroImageIndex": 1,
+          "standardImageIndex": 1,
+          "heroImageSha256": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5",
+          "standardImageSha256": "7a83b1001e3577ce7a7787976a555b230e3eb77d9a76ac703ba70fb611c1b0e6",
+          "sharedImageUri": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5.jpg",
+          "sharedTextureKey": "shega-shared-people:v1:1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "teethMaterial",
+      "heroMaterialIndex": 2,
+      "standardMaterialIndex": 2,
+      "slots": []
+    },
+    {
+      "material": "Eyeblue",
+      "heroMaterialIndex": 3,
+      "standardMaterialIndex": 3,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 2,
+          "standardTextureIndex": 2,
+          "heroImageIndex": 2,
+          "standardImageIndex": 2,
+          "heroImageSha256": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9",
+          "standardImageSha256": "31a3ad2aa305e8a23da7cf3e8333cf27e05071168276db41009b2a4bcd5aa02e",
+          "sharedImageUri": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9.png",
+          "sharedTextureKey": "shega-shared-people:v1:54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "braid01",
+      "heroMaterialIndex": 4,
+      "standardMaterialIndex": 4,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 3,
+          "standardTextureIndex": 3,
+          "heroImageIndex": 3,
+          "standardImageIndex": 3,
+          "heroImageSha256": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a",
+          "standardImageSha256": "caec6ff4b2e0579d54e6368e8f20f78451164b33ff1c5b5c28f2d6d2d5115e5b",
+          "sharedImageUri": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a.png",
+          "sharedTextureKey": "shega-shared-people:v1:3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "young_caucasian_female2",
+      "heroMaterialIndex": 5,
+      "standardMaterialIndex": 5,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 4,
+          "standardTextureIndex": 4,
+          "heroImageIndex": 4,
+          "standardImageIndex": 4,
+          "heroImageSha256": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9",
+          "standardImageSha256": "176c11e7a3e1bfcea8e75c3212e5a9f68e5de24d22cc86b36cc623d218f0b692",
+          "sharedImageUri": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9.png",
+          "sharedTextureKey": "shega-shared-people:v1:a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "Bodymat",
+      "heroMaterialIndex": 6,
+      "standardMaterialIndex": 6,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 5,
+          "standardTextureIndex": 5,
+          "heroImageIndex": 5,
+          "standardImageIndex": 5,
+          "heroImageSha256": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2",
+          "standardImageSha256": "cfa72f1854da776e75be720246e154c5f5873541723d8f0dc64726f25d76c9cd",
+          "sharedImageUri": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2.png",
+          "sharedTextureKey": "shega-shared-people:v1:4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "Bottommat",
+      "heroMaterialIndex": 7,
+      "standardMaterialIndex": 7,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 6,
+          "standardTextureIndex": 6,
+          "heroImageIndex": 6,
+          "standardImageIndex": 6,
+          "heroImageSha256": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44",
+          "standardImageSha256": "1ee060ceaf2eefe83a8032e8255d1d97a6fcdd56ef237b5fe699c168ba22df0e",
+          "sharedImageUri": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44.png",
+          "sharedTextureKey": "shega-shared-people:v1:72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "Hairmat",
+      "heroMaterialIndex": 8,
+      "standardMaterialIndex": 8,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 7,
+          "standardTextureIndex": 7,
+          "heroImageIndex": 7,
+          "standardImageIndex": 7,
+          "heroImageSha256": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c",
+          "standardImageSha256": "3a69869eadd19b02064638722e479f803a823c8ccd08674e798d124006bf1206",
+          "sharedImageUri": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c.png",
+          "sharedTextureKey": "shega-shared-people:v1:16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "Shoesmat",
+      "heroMaterialIndex": 9,
+      "standardMaterialIndex": 9,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 8,
+          "standardTextureIndex": 8,
+          "heroImageIndex": 8,
+          "standardImageIndex": 8,
+          "heroImageSha256": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51",
+          "standardImageSha256": "2353eb8e0ddad562854dcb5a16a94c9703d5cf15de3c0774aa19174b6edb0098",
+          "sharedImageUri": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51.png",
+          "sharedTextureKey": "shega-shared-people:v1:29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    },
+    {
+      "material": "Topmat",
+      "heroMaterialIndex": 10,
+      "standardMaterialIndex": 10,
+      "slots": [
+        {
+          "slot": "pbrMetallicRoughness.baseColorTexture",
+          "heroTextureIndex": 9,
+          "standardTextureIndex": 9,
+          "heroImageIndex": 9,
+          "standardImageIndex": 9,
+          "heroImageSha256": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4",
+          "standardImageSha256": "4ff70d3708f2f695d50f4eebb8fa2ae3faaf210bbcd037a8f3cbd7abb92a97ff",
+          "sharedImageUri": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4.png",
+          "sharedTextureKey": "shega-shared-people:v1:67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4:mag9729:min9987:s10497:t10497:srgb:uv0:transform74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+          },
+          "colorSpace": "srgb",
+          "texCoord": 0,
+          "transform": null
+        }
+      ]
+    }
+  ],
+  "profiles": {
+    "hero": {
+      "source": {
+        "file": "/models/festival-people-hero.glb",
+        "sha256": "47e61451881f5748a5ded8357ec5ac1e101f5b6779ee8de680ffe84073c8790b",
+        "bytes": 11170420
+      },
+      "sourceAttribution": {
+        "file": "/models/festival-people-hero.attribution.json",
+        "sha256": "8eaf1751e0e6749b111409216e8dc12feb6c1a8b0d77487554474b7f6c7ef13b"
+      },
+      "originalAttribution": {
+        "asset": "/models/festival-people-hero.glb",
+        "profile": "hero",
+        "budgets": {
+          "trianglesPerPose": 24000,
+          "textureSize": 2048,
+          "bytes": 18000000
+        },
+        "license": "CC-BY-4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "sources": [
+          {
+            "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+            "title": "Manuel Animated 001 - 3D Dancing Man"
+          },
+          {
+            "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+            "title": "Woman In Red"
+          },
+          {
+            "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+            "title": "Kandace Dancing"
+          }
+        ],
+        "modifications": "Static pose baking, original smooth normals, arm adjustments, 24000-triangle budget, native textures capped at 2048px, PBR lighting, preserved alpha hair, shared grounded one-metre normalization and +Z facing.",
+        "textureNote": "The existing source textures are at most 1024px; hero retains original image bytes without invented detail or skin tinting.",
+        "units": "Scale every variant by the desired adult standing height in metres. Raised hands may extend beyond this height.",
+        "textures": 10,
+        "maxTextureSize": 1024,
+        "materials": 11,
+        "animations": 0,
+        "skins": 0,
+        "bytes": 11170420,
+        "variants": [
+          {
+            "name": "manuel-hands-up",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": 29,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.99071,
+            "leftHand": [
+              0.01815,
+              1.10632,
+              0.12803
+            ],
+            "rightHand": [
+              -0.0403,
+              1.10893,
+              0.10375
+            ],
+            "head": [
+              -0.01668,
+              0.88728,
+              0.06563
+            ],
+            "headTop": [
+              0.03752,
+              0.9847,
+              0.03185
+            ],
+            "chest": [
+              -0.02045,
+              0.80267,
+              0.05722
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 23406,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              1.16047
+            ]
+          },
+          {
+            "name": "manuel-groove",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": 9.5,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.87974,
+            "leftHand": [
+              0.03117,
+              0.6483,
+              0.16275
+            ],
+            "rightHand": [
+              -0.07897,
+              0.72615,
+              0.19611
+            ],
+            "head": [
+              -0.04815,
+              0.89116,
+              0.10745
+            ],
+            "headTop": [
+              -0.07987,
+              1.00072,
+              0.08379
+            ],
+            "chest": [
+              -0.05181,
+              0.75444,
+              0.09808
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 23406,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              1.01484
+            ]
+          },
+          {
+            "name": "manuel-work",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": 0,
+            "armAdjustment": "work",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.98128,
+            "leftHand": [
+              0.0939,
+              0.58115,
+              0.20702
+            ],
+            "rightHand": [
+              -0.10868,
+              0.57132,
+              0.20505
+            ],
+            "head": [
+              -0.01763,
+              0.88351,
+              0.07233
+            ],
+            "headTop": [
+              -0.01763,
+              1,
+              0.07233
+            ],
+            "chest": [
+              -0.00721,
+              0.74694,
+              0.06422
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 23406,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "manuel-stand",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": null,
+            "armAdjustment": "stand",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.98128,
+            "leftHand": [
+              0.11788,
+              0.49405,
+              0.06541
+            ],
+            "rightHand": [
+              -0.13235,
+              0.48554,
+              0.06514
+            ],
+            "head": [
+              -0.01763,
+              0.88351,
+              0.07233
+            ],
+            "headTop": [
+              -0.01763,
+              1,
+              0.07233
+            ],
+            "chest": [
+              -0.00721,
+              0.74694,
+              0.06422
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 23406,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "red-hands-up",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": 7.5,
+            "armAdjustment": "raised",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.99153,
+            "leftHand": [
+              0.14513,
+              0.91986,
+              0.04278
+            ],
+            "rightHand": [
+              -0.15321,
+              0.90682,
+              0.04264
+            ],
+            "head": [
+              -0.00638,
+              0.78213,
+              0.0091
+            ],
+            "headTop": [
+              0.0024,
+              0.86521,
+              0.02524
+            ],
+            "chest": [
+              -0.00403,
+              0.65273,
+              0.00951
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 23295,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              1.02431
+            ]
+          },
+          {
+            "name": "red-groove",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": 2,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.99987,
+            "leftHand": [
+              0.22767,
+              0.60225,
+              0.11278
+            ],
+            "rightHand": [
+              -0.1639,
+              0.5364,
+              0.06162
+            ],
+            "head": [
+              -0.0017,
+              0.84513,
+              0.03715
+            ],
+            "headTop": [
+              0.00688,
+              0.92787,
+              0.05508
+            ],
+            "chest": [
+              -0.00399,
+              0.70312,
+              0.03935
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 23297,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              0.92668
+            ]
+          },
+          {
+            "name": "red-work",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": null,
+            "armAdjustment": "work",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.08944,
+              0.63094,
+              0.13476
+            ],
+            "rightHand": [
+              -0.08952,
+              0.63122,
+              0.13433
+            ],
+            "head": [
+              0.00001,
+              0.91491,
+              0.0135
+            ],
+            "headTop": [
+              0.00001,
+              1,
+              0.0135
+            ],
+            "chest": [
+              -0.00001,
+              0.76391,
+              0.02291
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 23382,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "red-stand",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": null,
+            "armAdjustment": "stand",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.10884,
+              0.56075,
+              0.02006
+            ],
+            "rightHand": [
+              -0.10885,
+              0.5613,
+              0.02
+            ],
+            "head": [
+              0.00001,
+              0.91491,
+              0.0135
+            ],
+            "headTop": [
+              0.00001,
+              1,
+              0.0135
+            ],
+            "chest": [
+              -0.00001,
+              0.76391,
+              0.02291
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 23381,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "kandace-hands-up",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": 11.5,
+            "armAdjustment": "raised",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.88682,
+            "leftHand": [
+              0.08572,
+              0.99583,
+              0.03884
+            ],
+            "rightHand": [
+              -0.19041,
+              1.01754,
+              0.03883
+            ],
+            "head": [
+              -0.04192,
+              0.81264,
+              -0.01539
+            ],
+            "headTop": [
+              -0.04497,
+              0.92902,
+              -0.02203
+            ],
+            "chest": [
+              -0.05231,
+              0.69679,
+              -0.00745
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 22994,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              1.0819
+            ]
+          },
+          {
+            "name": "kandace-groove",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": 3.5,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.98977,
+            "leftHand": [
+              0.31918,
+              0.56663,
+              0.0724
+            ],
+            "rightHand": [
+              -0.26036,
+              0.55322,
+              -0.0345
+            ],
+            "head": [
+              0.03409,
+              0.83846,
+              0.01458
+            ],
+            "headTop": [
+              0.0555,
+              0.95025,
+              -0.01077
+            ],
+            "chest": [
+              0.01475,
+              0.70293,
+              0.00899
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 22994,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              0.95368
+            ]
+          },
+          {
+            "name": "kandace-work",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": null,
+            "armAdjustment": "work",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.07212,
+              0.58392,
+              0.19368
+            ],
+            "rightHand": [
+              -0.07218,
+              0.58389,
+              0.19361
+            ],
+            "head": [
+              -0.00002,
+              0.88338,
+              0.04676
+            ],
+            "headTop": [
+              -0.00002,
+              1,
+              0.04676
+            ],
+            "chest": [
+              -0.00002,
+              0.75016,
+              0.04546
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 22996,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "kandace-stand",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": null,
+            "armAdjustment": "stand",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.09703,
+              0.4926,
+              0.04742
+            ],
+            "rightHand": [
+              -0.09707,
+              0.49263,
+              0.04741
+            ],
+            "head": [
+              -0.00002,
+              0.88338,
+              0.04676
+            ],
+            "headTop": [
+              -0.00002,
+              1,
+              0.04676
+            ],
+            "chest": [
+              -0.00002,
+              0.75016,
+              0.04546
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 22996,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "output": {
+        "file": "/models/shared-people/hero.glb",
+        "sha256": "28c946b803389de482af7b9ee7baf4188c32a60b770b1e923fc9cd5b79e2b179",
+        "bytes": 6090864
+      },
+      "geometry": {
+        "meshes": 12,
+        "accessors": 161,
+        "materials": 11,
+        "animations": 0,
+        "skins": 0,
+        "triangles": 278959,
+        "maxTrianglesPerPose": 23406,
+        "poses": [
+          {
+            "name": "manuel-hands-up",
+            "triangles": 23406,
+            "extras": {
+              "name": "manuel-hands-up",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": 29,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.99071,
+              "leftHand": [
+                0.01815,
+                1.10632,
+                0.12803
+              ],
+              "rightHand": [
+                -0.0403,
+                1.10893,
+                0.10375
+              ],
+              "head": [
+                -0.01668,
+                0.88728,
+                0.06563
+              ],
+              "headTop": [
+                0.03752,
+                0.9847,
+                0.03185
+              ],
+              "chest": [
+                -0.02045,
+                0.80267,
+                0.05722
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 23406,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "manuel-groove",
+            "triangles": 23406,
+            "extras": {
+              "name": "manuel-groove",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": 9.5,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.87974,
+              "leftHand": [
+                0.03117,
+                0.6483,
+                0.16275
+              ],
+              "rightHand": [
+                -0.07897,
+                0.72615,
+                0.19611
+              ],
+              "head": [
+                -0.04815,
+                0.89116,
+                0.10745
+              ],
+              "headTop": [
+                -0.07987,
+                1.00072,
+                0.08379
+              ],
+              "chest": [
+                -0.05181,
+                0.75444,
+                0.09808
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 23406,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "manuel-work",
+            "triangles": 23406,
+            "extras": {
+              "name": "manuel-work",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": 0,
+              "armAdjustment": "work",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.98128,
+              "leftHand": [
+                0.0939,
+                0.58115,
+                0.20702
+              ],
+              "rightHand": [
+                -0.10868,
+                0.57132,
+                0.20505
+              ],
+              "head": [
+                -0.01763,
+                0.88351,
+                0.07233
+              ],
+              "headTop": [
+                -0.01763,
+                1,
+                0.07233
+              ],
+              "chest": [
+                -0.00721,
+                0.74694,
+                0.06422
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 23406,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "manuel-stand",
+            "triangles": 23406,
+            "extras": {
+              "name": "manuel-stand",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": null,
+              "armAdjustment": "stand",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.98128,
+              "leftHand": [
+                0.11788,
+                0.49405,
+                0.06541
+              ],
+              "rightHand": [
+                -0.13235,
+                0.48554,
+                0.06514
+              ],
+              "head": [
+                -0.01763,
+                0.88351,
+                0.07233
+              ],
+              "headTop": [
+                -0.01763,
+                1,
+                0.07233
+              ],
+              "chest": [
+                -0.00721,
+                0.74694,
+                0.06422
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 23406,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "red-hands-up",
+            "triangles": 23295,
+            "extras": {
+              "name": "red-hands-up",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": 7.5,
+              "armAdjustment": "raised",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.99153,
+              "leftHand": [
+                0.14513,
+                0.91986,
+                0.04278
+              ],
+              "rightHand": [
+                -0.15321,
+                0.90682,
+                0.04264
+              ],
+              "head": [
+                -0.00638,
+                0.78213,
+                0.0091
+              ],
+              "headTop": [
+                0.0024,
+                0.86521,
+                0.02524
+              ],
+              "chest": [
+                -0.00403,
+                0.65273,
+                0.00951
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 23295,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "red-groove",
+            "triangles": 23297,
+            "extras": {
+              "name": "red-groove",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": 2,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.99987,
+              "leftHand": [
+                0.22767,
+                0.60225,
+                0.11278
+              ],
+              "rightHand": [
+                -0.1639,
+                0.5364,
+                0.06162
+              ],
+              "head": [
+                -0.0017,
+                0.84513,
+                0.03715
+              ],
+              "headTop": [
+                0.00688,
+                0.92787,
+                0.05508
+              ],
+              "chest": [
+                -0.00399,
+                0.70312,
+                0.03935
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 23297,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "red-work",
+            "triangles": 23382,
+            "extras": {
+              "name": "red-work",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": null,
+              "armAdjustment": "work",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.08944,
+                0.63094,
+                0.13476
+              ],
+              "rightHand": [
+                -0.08952,
+                0.63122,
+                0.13433
+              ],
+              "head": [
+                0.00001,
+                0.91491,
+                0.0135
+              ],
+              "headTop": [
+                0.00001,
+                1,
+                0.0135
+              ],
+              "chest": [
+                -0.00001,
+                0.76391,
+                0.02291
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 23382,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "red-stand",
+            "triangles": 23381,
+            "extras": {
+              "name": "red-stand",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": null,
+              "armAdjustment": "stand",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.10884,
+                0.56075,
+                0.02006
+              ],
+              "rightHand": [
+                -0.10885,
+                0.5613,
+                0.02
+              ],
+              "head": [
+                0.00001,
+                0.91491,
+                0.0135
+              ],
+              "headTop": [
+                0.00001,
+                1,
+                0.0135
+              ],
+              "chest": [
+                -0.00001,
+                0.76391,
+                0.02291
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 23381,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "kandace-hands-up",
+            "triangles": 22994,
+            "extras": {
+              "name": "kandace-hands-up",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": 11.5,
+              "armAdjustment": "raised",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.88682,
+              "leftHand": [
+                0.08572,
+                0.99583,
+                0.03884
+              ],
+              "rightHand": [
+                -0.19041,
+                1.01754,
+                0.03883
+              ],
+              "head": [
+                -0.04192,
+                0.81264,
+                -0.01539
+              ],
+              "headTop": [
+                -0.04497,
+                0.92902,
+                -0.02203
+              ],
+              "chest": [
+                -0.05231,
+                0.69679,
+                -0.00745
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 22994,
+              "primitives": 5
+            }
+          },
+          {
+            "name": "kandace-groove",
+            "triangles": 22994,
+            "extras": {
+              "name": "kandace-groove",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": 3.5,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.98977,
+              "leftHand": [
+                0.31918,
+                0.56663,
+                0.0724
+              ],
+              "rightHand": [
+                -0.26036,
+                0.55322,
+                -0.0345
+              ],
+              "head": [
+                0.03409,
+                0.83846,
+                0.01458
+              ],
+              "headTop": [
+                0.0555,
+                0.95025,
+                -0.01077
+              ],
+              "chest": [
+                0.01475,
+                0.70293,
+                0.00899
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 22994,
+              "primitives": 5
+            }
+          },
+          {
+            "name": "kandace-work",
+            "triangles": 22996,
+            "extras": {
+              "name": "kandace-work",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": null,
+              "armAdjustment": "work",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.07212,
+                0.58392,
+                0.19368
+              ],
+              "rightHand": [
+                -0.07218,
+                0.58389,
+                0.19361
+              ],
+              "head": [
+                -0.00002,
+                0.88338,
+                0.04676
+              ],
+              "headTop": [
+                -0.00002,
+                1,
+                0.04676
+              ],
+              "chest": [
+                -0.00002,
+                0.75016,
+                0.04546
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 22996,
+              "primitives": 5
+            }
+          },
+          {
+            "name": "kandace-stand",
+            "triangles": 22996,
+            "extras": {
+              "name": "kandace-stand",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": null,
+              "armAdjustment": "stand",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.09703,
+                0.4926,
+                0.04742
+              ],
+              "rightHand": [
+                -0.09707,
+                0.49263,
+                0.04741
+              ],
+              "head": [
+                -0.00002,
+                0.88338,
+                0.04676
+              ],
+              "headTop": [
+                -0.00002,
+                1,
+                0.04676
+              ],
+              "chest": [
+                -0.00002,
+                0.75016,
+                0.04546
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 22996,
+              "primitives": 5
+            }
+          }
+        ]
+      },
+      "bufferViews": [
+        {
+          "sourceIndex": 10,
+          "outputIndex": 0,
+          "byteLength": 1186824,
+          "sha256": "32849584b8cf6cf86ceeb3cadefe59abae4cfd8b4c041dfb6c563c23f4b4bed3"
+        },
+        {
+          "sourceIndex": 11,
+          "outputIndex": 1,
+          "byteLength": 419552,
+          "sha256": "c03878e6bb4d7d4ae387da8589ded7abad9809691efda2f6a2d04cef8fb3f85e"
+        },
+        {
+          "sourceIndex": 12,
+          "outputIndex": 2,
+          "byteLength": 314664,
+          "sha256": "c43dbb13fdd06d2ae7603607030403c33c55cbe674187377e8e9594dd35b847d"
+        },
+        {
+          "sourceIndex": 13,
+          "outputIndex": 3,
+          "byteLength": 314664,
+          "sha256": "f7ab43cd62b1f9434b6efeeb5fcfc4242c36ab3fa3cbbc4a42ceeb1fea30d4c3"
+        },
+        {
+          "sourceIndex": 14,
+          "outputIndex": 4,
+          "byteLength": 314664,
+          "sha256": "48d9b0e17c70cb2a0b3cb1b0306e82a864bfa39ec4413a4de7ea4b5a297a3b91"
+        },
+        {
+          "sourceIndex": 15,
+          "outputIndex": 5,
+          "byteLength": 39872,
+          "sha256": "6f32e84b4e99becacff328272e472f141d00270f0436275b829c3bd5904e17ab"
+        },
+        {
+          "sourceIndex": 16,
+          "outputIndex": 6,
+          "byteLength": 30176,
+          "sha256": "0bd87431473deb34687d3cd03d1bda597fb6b25f44d236940622cb2fd3c3e5b2"
+        },
+        {
+          "sourceIndex": 17,
+          "outputIndex": 7,
+          "byteLength": 13248,
+          "sha256": "4413897367d892637d6f1872855dcce117e924ef569b44a30c65ce24dba112ec"
+        },
+        {
+          "sourceIndex": 18,
+          "outputIndex": 8,
+          "byteLength": 21536,
+          "sha256": "5bbf423c802b547266056553c8f0e83d0ad0d9fc4133a69d20619e65537c9214"
+        },
+        {
+          "sourceIndex": 19,
+          "outputIndex": 9,
+          "byteLength": 93344,
+          "sha256": "0227d8d9b50983c8ec811d1cbf5fa66cbc3e6f763daad70c01aeeba988bc3088"
+        },
+        {
+          "sourceIndex": 20,
+          "outputIndex": 10,
+          "byteLength": 259904,
+          "sha256": "d585d3a9359130bb3d04bf01ccb20d76e1427acc772a47ee754abbdddb11cf70"
+        },
+        {
+          "sourceIndex": 21,
+          "outputIndex": 11,
+          "byteLength": 39744,
+          "sha256": "b64990372e16f4dc69322487bb5b522f3cb5e147729ab95e41f30a103c97946e"
+        },
+        {
+          "sourceIndex": 22,
+          "outputIndex": 12,
+          "byteLength": 30336,
+          "sha256": "8b6f332c4eb94990018b8a213a63aa0850ec27c7f04bbf78c66a2ce4eda61c73"
+        },
+        {
+          "sourceIndex": 23,
+          "outputIndex": 13,
+          "byteLength": 13248,
+          "sha256": "8647bae6dd554d51327d4c231cb330913bbc4f8103058dd404699e5c35809e64"
+        },
+        {
+          "sourceIndex": 24,
+          "outputIndex": 14,
+          "byteLength": 21536,
+          "sha256": "005f3d30cb0703ce36f9f3f47ade69dd622d826768a491c3045db9462bcc483f"
+        },
+        {
+          "sourceIndex": 25,
+          "outputIndex": 15,
+          "byteLength": 93536,
+          "sha256": "10e379fc936b02f30b9b5b8b497f8b9f63854bfa5a85b368ab9fbb3e2766f459"
+        },
+        {
+          "sourceIndex": 26,
+          "outputIndex": 16,
+          "byteLength": 259840,
+          "sha256": "ef2362db4bd3e4d652a82f868763c1c92231cfb8a25bab3448e8798a2eba9f4a"
+        },
+        {
+          "sourceIndex": 27,
+          "outputIndex": 17,
+          "byteLength": 39712,
+          "sha256": "2c92523c64c88f377d73d1dba38fa5f97b87a14de60b52841aae45b2647a8afd"
+        },
+        {
+          "sourceIndex": 28,
+          "outputIndex": 18,
+          "byteLength": 30144,
+          "sha256": "74ce52f15f2e622d7e44a2657beb0f0c66f15f9694027915e2fd879fa2a6b130"
+        },
+        {
+          "sourceIndex": 29,
+          "outputIndex": 19,
+          "byteLength": 14424,
+          "sha256": "e63963a00c1017b6c3ab8e08154712d6bda24fe984d06ed367c74882855ce602"
+        },
+        {
+          "sourceIndex": 30,
+          "outputIndex": 20,
+          "byteLength": 21536,
+          "sha256": "66ad707698253600b79e9dd442d8f158ac4e88eb046cf32e8612455321b5e2a1"
+        },
+        {
+          "sourceIndex": 31,
+          "outputIndex": 21,
+          "byteLength": 93408,
+          "sha256": "0ebe4241c8fbd76af1738c20c26d4b40e2eab4f140a81a9241361380b67f63fa"
+        },
+        {
+          "sourceIndex": 32,
+          "outputIndex": 22,
+          "byteLength": 260064,
+          "sha256": "d85db35cef1f0a08415511062362f220440413c01091b5ae8c896fb63def01e5"
+        },
+        {
+          "sourceIndex": 33,
+          "outputIndex": 23,
+          "byteLength": 39680,
+          "sha256": "ebd6169c2613f60d1735c1ae233c3d5a3ccc20b9b63b7a7f1d9350d0858cb589"
+        },
+        {
+          "sourceIndex": 34,
+          "outputIndex": 24,
+          "byteLength": 93440,
+          "sha256": "ed3039f2986b2c43f0c8652c2d6e727233ac717df377069110061cdd67763862"
+        },
+        {
+          "sourceIndex": 35,
+          "outputIndex": 25,
+          "byteLength": 260128,
+          "sha256": "2422fc2097dec9bdb3e4b0fd3ecc974b14fc3da9039414caac252e939a00ef7b"
+        },
+        {
+          "sourceIndex": 36,
+          "outputIndex": 26,
+          "byteLength": 34944,
+          "sha256": "edfc7b0943610495d3fd35664bd9481ee44ad0a9749f27788d8ded89088eb5aa"
+        },
+        {
+          "sourceIndex": 37,
+          "outputIndex": 27,
+          "byteLength": 73344,
+          "sha256": "dc595661581a46b6bb96c0a35e5fb1878f58c8950506a8dbdf8b9663aa5d0ed7"
+        },
+        {
+          "sourceIndex": 38,
+          "outputIndex": 28,
+          "byteLength": 66144,
+          "sha256": "a48e2596f7bef8fe5187dd59ffa61d0afb7817e33e632d2d1b6fa754fa1b9652"
+        },
+        {
+          "sourceIndex": 39,
+          "outputIndex": 29,
+          "byteLength": 33376,
+          "sha256": "a95da2cee1d22de0a7b2b0f8153605d5c6a7adfd9f21c957f19b8398d2c58a8b"
+        },
+        {
+          "sourceIndex": 40,
+          "outputIndex": 30,
+          "byteLength": 253184,
+          "sha256": "a712700ff29986936726f37535f1948b9fb38b49a2e83eaf2b13e582b62ef6b0"
+        },
+        {
+          "sourceIndex": 41,
+          "outputIndex": 31,
+          "byteLength": 35040,
+          "sha256": "e2a6009609c091defb1d148b424d3a220039c4a25e2ffe73a5c6025ba8a3f468"
+        },
+        {
+          "sourceIndex": 42,
+          "outputIndex": 32,
+          "byteLength": 73760,
+          "sha256": "153215ed4a823cfc18f0bf6bd12ee9533f560b3d0c1f5b3445d690bd6da7ff89"
+        },
+        {
+          "sourceIndex": 43,
+          "outputIndex": 33,
+          "byteLength": 66656,
+          "sha256": "4c30eca48a56bcccb00adcc204f4bf3263f97f679fd8df39da8c79b07acfa821"
+        },
+        {
+          "sourceIndex": 44,
+          "outputIndex": 34,
+          "byteLength": 33152,
+          "sha256": "65f28093ebd9920d20a05972e9b482862b6c63b91149999748393efef6566bbe"
+        },
+        {
+          "sourceIndex": 45,
+          "outputIndex": 35,
+          "byteLength": 253344,
+          "sha256": "5a7ae559db3ffc19a9d6748c66e5d889f8d7d0475a3418e7aa9b87b66180a023"
+        },
+        {
+          "sourceIndex": 46,
+          "outputIndex": 36,
+          "byteLength": 34976,
+          "sha256": "57bdb65f67c21ab0db404479489a7953230ea9e71d1bfae52942bc5a59a2ef47"
+        },
+        {
+          "sourceIndex": 47,
+          "outputIndex": 37,
+          "byteLength": 73344,
+          "sha256": "c9f70fc545896729a9922b7a5380f3d541b23597a74da5818ac7e8c920969002"
+        },
+        {
+          "sourceIndex": 48,
+          "outputIndex": 38,
+          "byteLength": 66464,
+          "sha256": "a77ca786391f4f96aa749b945c5304df06faed8bc59b080d153bf9db3dd03493"
+        },
+        {
+          "sourceIndex": 49,
+          "outputIndex": 39,
+          "byteLength": 33184,
+          "sha256": "b4792eeeb13a8cc102f065510285a3086056f1c3e5ee57d16677fc143d5604a9"
+        },
+        {
+          "sourceIndex": 50,
+          "outputIndex": 40,
+          "byteLength": 253024,
+          "sha256": "b854c81f19f502f882f12ab9f108ccc645f3a80eca40bc01e82e6623cd7c4854"
+        },
+        {
+          "sourceIndex": 51,
+          "outputIndex": 41,
+          "byteLength": 55008,
+          "sha256": "4067fca4454cf34759e60d38da19aa0fae983d2772b9e0a720b9c3ad9e41dce0"
+        },
+        {
+          "sourceIndex": 52,
+          "outputIndex": 42,
+          "byteLength": 33184,
+          "sha256": "7afe0f0db4192564a29acb49b538963d5ee02fbd62b031b6615ab1efb26aefb8"
+        },
+        {
+          "sourceIndex": 53,
+          "outputIndex": 43,
+          "byteLength": 252192,
+          "sha256": "38bac044d54f355522e97da634ec191c4fa9e7f5badbbf173910091b35a31177"
+        }
+      ],
+      "removedImageBufferViews": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sourceImages": [
+        {
+          "index": 0,
+          "bytes": 673743,
+          "sha256": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4",
+          "mimeType": "image/jpeg",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 0,
+          "sharedUri": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4.jpg"
+        },
+        {
+          "index": 1,
+          "bytes": 720925,
+          "sha256": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5",
+          "mimeType": "image/jpeg",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 1,
+          "sharedUri": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5.jpg"
+        },
+        {
+          "index": 2,
+          "bytes": 14542,
+          "sha256": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9",
+          "mimeType": "image/png",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 2,
+          "sharedUri": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9.png"
+        },
+        {
+          "index": 3,
+          "bytes": 647330,
+          "sha256": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a",
+          "mimeType": "image/png",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 3,
+          "sharedUri": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a.png"
+        },
+        {
+          "index": 4,
+          "bytes": 1010262,
+          "sha256": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9",
+          "mimeType": "image/png",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 4,
+          "sharedUri": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9.png"
+        },
+        {
+          "index": 5,
+          "bytes": 894163,
+          "sha256": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2",
+          "mimeType": "image/png",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 5,
+          "sharedUri": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2.png"
+        },
+        {
+          "index": 6,
+          "bytes": 414062,
+          "sha256": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44",
+          "mimeType": "image/png",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 6,
+          "sharedUri": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44.png"
+        },
+        {
+          "index": 7,
+          "bytes": 329867,
+          "sha256": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c",
+          "mimeType": "image/png",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 7,
+          "sharedUri": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c.png"
+        },
+        {
+          "index": 8,
+          "bytes": 322770,
+          "sha256": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51",
+          "mimeType": "image/png",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 8,
+          "sharedUri": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51.png"
+        },
+        {
+          "index": 9,
+          "bytes": 54224,
+          "sha256": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4",
+          "mimeType": "image/png",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 9,
+          "sharedUri": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4.png"
+        }
+      ]
+    },
+    "standard": {
+      "source": {
+        "file": "/models/festival-people.glb",
+        "sha256": "c8987a59a8ab3ae1ed570a378b3ce51b2cce778707dd8fbdd536e3fefa5ca8d5",
+        "bytes": 2598188
+      },
+      "sourceAttribution": {
+        "file": "/models/festival-people.attribution.json",
+        "sha256": "e2c30df09bb1f628c296524ddc421a8944438b3e23606897d645fc70d8581cf3"
+      },
+      "originalAttribution": {
+        "asset": "/models/festival-people.glb",
+        "profile": "standard",
+        "budgets": {
+          "trianglesPerPose": 5000,
+          "textureSize": 1024,
+          "bytes": 3500000
+        },
+        "license": "CC-BY-4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "sources": [
+          {
+            "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+            "title": "Manuel Animated 001 - 3D Dancing Man"
+          },
+          {
+            "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+            "title": "Woman In Red"
+          },
+          {
+            "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+            "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+            "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+            "title": "Kandace Dancing"
+          }
+        ],
+        "modifications": "Static pose baking, original smooth normals, arm adjustments, 5000-triangle budget, native textures capped at 1024px, PBR lighting, preserved alpha hair, shared grounded one-metre normalization and +Z facing.",
+        "textureNote": "The existing source textures are at most 1024px; hero retains original image bytes without invented detail or skin tinting.",
+        "units": "Scale every variant by the desired adult standing height in metres. Raised hands may extend beyond this height.",
+        "textures": 10,
+        "maxTextureSize": 1024,
+        "materials": 11,
+        "animations": 0,
+        "skins": 0,
+        "bytes": 2598188,
+        "variants": [
+          {
+            "name": "manuel-hands-up",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": 29,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.99071,
+            "leftHand": [
+              0.01815,
+              1.10632,
+              0.12803
+            ],
+            "rightHand": [
+              -0.0403,
+              1.10893,
+              0.10375
+            ],
+            "head": [
+              -0.01668,
+              0.88728,
+              0.06563
+            ],
+            "headTop": [
+              0.03752,
+              0.9847,
+              0.03185
+            ],
+            "chest": [
+              -0.02045,
+              0.80267,
+              0.05722
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 4399,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              1.15952
+            ]
+          },
+          {
+            "name": "manuel-groove",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": 9.5,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.87974,
+            "leftHand": [
+              0.03117,
+              0.6483,
+              0.16275
+            ],
+            "rightHand": [
+              -0.07897,
+              0.72615,
+              0.19611
+            ],
+            "head": [
+              -0.04815,
+              0.89116,
+              0.10745
+            ],
+            "headTop": [
+              -0.07987,
+              1.00072,
+              0.08379
+            ],
+            "chest": [
+              -0.05181,
+              0.75444,
+              0.09808
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 4399,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              1.01484
+            ]
+          },
+          {
+            "name": "manuel-work",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": 0,
+            "armAdjustment": "work",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.98128,
+            "leftHand": [
+              0.0939,
+              0.58115,
+              0.20702
+            ],
+            "rightHand": [
+              -0.10868,
+              0.57132,
+              0.20505
+            ],
+            "head": [
+              -0.01763,
+              0.88351,
+              0.07233
+            ],
+            "headTop": [
+              -0.01763,
+              1,
+              0.07233
+            ],
+            "chest": [
+              -0.00721,
+              0.74694,
+              0.06422
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 4799,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              0.99996
+            ]
+          },
+          {
+            "name": "manuel-stand",
+            "source": "manuel",
+            "sourceFile": "dancer.glb",
+            "poseTime": null,
+            "armAdjustment": "stand",
+            "standingHeight": 1,
+            "sourceStandingHeight": 185.17316,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.98128,
+            "leftHand": [
+              0.11788,
+              0.49405,
+              0.06541
+            ],
+            "rightHand": [
+              -0.13235,
+              0.48554,
+              0.06514
+            ],
+            "head": [
+              -0.01763,
+              0.88351,
+              0.07233
+            ],
+            "headTop": [
+              -0.01763,
+              1,
+              0.07233
+            ],
+            "chest": [
+              -0.00721,
+              0.74694,
+              0.06422
+            ],
+            "sourceTriangles": 23406,
+            "attribution": {
+              "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+              "title": "Manuel Animated 001 - 3D Dancing Man"
+            },
+            "triangles": 4400,
+            "primitives": 1,
+            "boundsY": [
+              0,
+              0.99996
+            ]
+          },
+          {
+            "name": "red-hands-up",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": 7.5,
+            "armAdjustment": "raised",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.99153,
+            "leftHand": [
+              0.14513,
+              0.91986,
+              0.04278
+            ],
+            "rightHand": [
+              -0.15321,
+              0.90682,
+              0.04264
+            ],
+            "head": [
+              -0.00638,
+              0.78213,
+              0.0091
+            ],
+            "headTop": [
+              0.0024,
+              0.86521,
+              0.02524
+            ],
+            "chest": [
+              -0.00403,
+              0.65273,
+              0.00951
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 4632,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              1.02373
+            ]
+          },
+          {
+            "name": "red-groove",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": 2,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.99987,
+            "leftHand": [
+              0.22767,
+              0.60225,
+              0.11278
+            ],
+            "rightHand": [
+              -0.1639,
+              0.5364,
+              0.06162
+            ],
+            "head": [
+              -0.0017,
+              0.84513,
+              0.03715
+            ],
+            "headTop": [
+              0.00688,
+              0.92787,
+              0.05508
+            ],
+            "chest": [
+              -0.00399,
+              0.70312,
+              0.03935
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 4618,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              0.92625
+            ]
+          },
+          {
+            "name": "red-work",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": null,
+            "armAdjustment": "work",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.08944,
+              0.63094,
+              0.13476
+            ],
+            "rightHand": [
+              -0.08952,
+              0.63122,
+              0.13433
+            ],
+            "head": [
+              0.00001,
+              0.91491,
+              0.0135
+            ],
+            "headTop": [
+              0.00001,
+              1,
+              0.0135
+            ],
+            "chest": [
+              -0.00001,
+              0.76391,
+              0.02291
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 4977,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              0.99471
+            ]
+          },
+          {
+            "name": "red-stand",
+            "source": "red",
+            "sourceFile": "dancer3.glb",
+            "poseTime": null,
+            "armAdjustment": "stand",
+            "standingHeight": 1,
+            "sourceStandingHeight": 179.17999,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.10884,
+              0.56075,
+              0.02006
+            ],
+            "rightHand": [
+              -0.10885,
+              0.5613,
+              0.02
+            ],
+            "head": [
+              0.00001,
+              0.91491,
+              0.0135
+            ],
+            "headTop": [
+              0.00001,
+              1,
+              0.0135
+            ],
+            "chest": [
+              -0.00001,
+              0.76391,
+              0.02291
+            ],
+            "sourceTriangles": 44198,
+            "attribution": {
+              "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+              "title": "Woman In Red"
+            },
+            "triangles": 4615,
+            "primitives": 6,
+            "boundsY": [
+              0,
+              0.99471
+            ]
+          },
+          {
+            "name": "kandace-hands-up",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": 11.5,
+            "armAdjustment": "raised",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.88682,
+            "leftHand": [
+              0.08572,
+              0.99583,
+              0.03884
+            ],
+            "rightHand": [
+              -0.19041,
+              1.01754,
+              0.03883
+            ],
+            "head": [
+              -0.04192,
+              0.81264,
+              -0.01539
+            ],
+            "headTop": [
+              -0.04497,
+              0.92902,
+              -0.02203
+            ],
+            "chest": [
+              -0.05231,
+              0.69679,
+              -0.00745
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 4391,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              1.08176
+            ]
+          },
+          {
+            "name": "kandace-groove",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": 3.5,
+            "armAdjustment": "source-animation",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 0.98977,
+            "leftHand": [
+              0.31918,
+              0.56663,
+              0.0724
+            ],
+            "rightHand": [
+              -0.26036,
+              0.55322,
+              -0.0345
+            ],
+            "head": [
+              0.03409,
+              0.83846,
+              0.01458
+            ],
+            "headTop": [
+              0.0555,
+              0.95025,
+              -0.01077
+            ],
+            "chest": [
+              0.01475,
+              0.70293,
+              0.00899
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 4393,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              0.95361
+            ]
+          },
+          {
+            "name": "kandace-work",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": null,
+            "armAdjustment": "work",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.07212,
+              0.58392,
+              0.19368
+            ],
+            "rightHand": [
+              -0.07218,
+              0.58389,
+              0.19361
+            ],
+            "head": [
+              -0.00002,
+              0.88338,
+              0.04676
+            ],
+            "headTop": [
+              -0.00002,
+              1,
+              0.04676
+            ],
+            "chest": [
+              -0.00002,
+              0.75016,
+              0.04546
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 4785,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              0.99897
+            ]
+          },
+          {
+            "name": "kandace-stand",
+            "source": "kandace",
+            "sourceFile": "dancer4.glb",
+            "poseTime": null,
+            "armAdjustment": "stand",
+            "standingHeight": 1,
+            "sourceStandingHeight": 3.19904,
+            "facing": "+Z",
+            "forward": [
+              0,
+              0,
+              1
+            ],
+            "toeForwardDot": 1,
+            "leftHand": [
+              0.09703,
+              0.4926,
+              0.04742
+            ],
+            "rightHand": [
+              -0.09707,
+              0.49263,
+              0.04741
+            ],
+            "head": [
+              -0.00002,
+              0.88338,
+              0.04676
+            ],
+            "headTop": [
+              -0.00002,
+              1,
+              0.04676
+            ],
+            "chest": [
+              -0.00002,
+              0.75016,
+              0.04546
+            ],
+            "sourceTriangles": 40715,
+            "attribution": {
+              "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+              "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+              "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+              "title": "Kandace Dancing"
+            },
+            "triangles": 4388,
+            "primitives": 5,
+            "boundsY": [
+              0,
+              0.99897
+            ]
+          }
+        ]
+      },
+      "output": {
+        "file": "/models/shared-people/standard.glb",
+        "sha256": "2cc5bf798164e8b46d3a844532335db4676b597d556ce4d8cdfa4a1fe462a825",
+        "bytes": 1619692
+      },
+      "geometry": {
+        "meshes": 12,
+        "accessors": 188,
+        "materials": 11,
+        "animations": 0,
+        "skins": 0,
+        "triangles": 54796,
+        "maxTrianglesPerPose": 4977,
+        "poses": [
+          {
+            "name": "manuel-hands-up",
+            "triangles": 4399,
+            "extras": {
+              "name": "manuel-hands-up",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": 29,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.99071,
+              "leftHand": [
+                0.01815,
+                1.10632,
+                0.12803
+              ],
+              "rightHand": [
+                -0.0403,
+                1.10893,
+                0.10375
+              ],
+              "head": [
+                -0.01668,
+                0.88728,
+                0.06563
+              ],
+              "headTop": [
+                0.03752,
+                0.9847,
+                0.03185
+              ],
+              "chest": [
+                -0.02045,
+                0.80267,
+                0.05722
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 4399,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "manuel-groove",
+            "triangles": 4399,
+            "extras": {
+              "name": "manuel-groove",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": 9.5,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.87974,
+              "leftHand": [
+                0.03117,
+                0.6483,
+                0.16275
+              ],
+              "rightHand": [
+                -0.07897,
+                0.72615,
+                0.19611
+              ],
+              "head": [
+                -0.04815,
+                0.89116,
+                0.10745
+              ],
+              "headTop": [
+                -0.07987,
+                1.00072,
+                0.08379
+              ],
+              "chest": [
+                -0.05181,
+                0.75444,
+                0.09808
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 4399,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "manuel-work",
+            "triangles": 4799,
+            "extras": {
+              "name": "manuel-work",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": 0,
+              "armAdjustment": "work",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.98128,
+              "leftHand": [
+                0.0939,
+                0.58115,
+                0.20702
+              ],
+              "rightHand": [
+                -0.10868,
+                0.57132,
+                0.20505
+              ],
+              "head": [
+                -0.01763,
+                0.88351,
+                0.07233
+              ],
+              "headTop": [
+                -0.01763,
+                1,
+                0.07233
+              ],
+              "chest": [
+                -0.00721,
+                0.74694,
+                0.06422
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 4799,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "manuel-stand",
+            "triangles": 4400,
+            "extras": {
+              "name": "manuel-stand",
+              "source": "manuel",
+              "sourceFile": "dancer.glb",
+              "poseTime": null,
+              "armAdjustment": "stand",
+              "standingHeight": 1,
+              "sourceStandingHeight": 185.17316,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.98128,
+              "leftHand": [
+                0.11788,
+                0.49405,
+                0.06541
+              ],
+              "rightHand": [
+                -0.13235,
+                0.48554,
+                0.06514
+              ],
+              "head": [
+                -0.01763,
+                0.88351,
+                0.07233
+              ],
+              "headTop": [
+                -0.01763,
+                1,
+                0.07233
+              ],
+              "chest": [
+                -0.00721,
+                0.74694,
+                0.06422
+              ],
+              "sourceTriangles": 23406,
+              "attribution": {
+                "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+                "title": "Manuel Animated 001 - 3D Dancing Man"
+              },
+              "triangles": 4400,
+              "primitives": 1
+            }
+          },
+          {
+            "name": "red-hands-up",
+            "triangles": 4632,
+            "extras": {
+              "name": "red-hands-up",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": 7.5,
+              "armAdjustment": "raised",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.99153,
+              "leftHand": [
+                0.14513,
+                0.91986,
+                0.04278
+              ],
+              "rightHand": [
+                -0.15321,
+                0.90682,
+                0.04264
+              ],
+              "head": [
+                -0.00638,
+                0.78213,
+                0.0091
+              ],
+              "headTop": [
+                0.0024,
+                0.86521,
+                0.02524
+              ],
+              "chest": [
+                -0.00403,
+                0.65273,
+                0.00951
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 4632,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "red-groove",
+            "triangles": 4618,
+            "extras": {
+              "name": "red-groove",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": 2,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.99987,
+              "leftHand": [
+                0.22767,
+                0.60225,
+                0.11278
+              ],
+              "rightHand": [
+                -0.1639,
+                0.5364,
+                0.06162
+              ],
+              "head": [
+                -0.0017,
+                0.84513,
+                0.03715
+              ],
+              "headTop": [
+                0.00688,
+                0.92787,
+                0.05508
+              ],
+              "chest": [
+                -0.00399,
+                0.70312,
+                0.03935
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 4618,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "red-work",
+            "triangles": 4977,
+            "extras": {
+              "name": "red-work",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": null,
+              "armAdjustment": "work",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.08944,
+                0.63094,
+                0.13476
+              ],
+              "rightHand": [
+                -0.08952,
+                0.63122,
+                0.13433
+              ],
+              "head": [
+                0.00001,
+                0.91491,
+                0.0135
+              ],
+              "headTop": [
+                0.00001,
+                1,
+                0.0135
+              ],
+              "chest": [
+                -0.00001,
+                0.76391,
+                0.02291
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 4977,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "red-stand",
+            "triangles": 4615,
+            "extras": {
+              "name": "red-stand",
+              "source": "red",
+              "sourceFile": "dancer3.glb",
+              "poseTime": null,
+              "armAdjustment": "stand",
+              "standingHeight": 1,
+              "sourceStandingHeight": 179.17999,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.10884,
+                0.56075,
+                0.02006
+              ],
+              "rightHand": [
+                -0.10885,
+                0.5613,
+                0.02
+              ],
+              "head": [
+                0.00001,
+                0.91491,
+                0.0135
+              ],
+              "headTop": [
+                0.00001,
+                1,
+                0.0135
+              ],
+              "chest": [
+                -0.00001,
+                0.76391,
+                0.02291
+              ],
+              "sourceTriangles": 44198,
+              "attribution": {
+                "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+                "title": "Woman In Red"
+              },
+              "triangles": 4615,
+              "primitives": 6
+            }
+          },
+          {
+            "name": "kandace-hands-up",
+            "triangles": 4391,
+            "extras": {
+              "name": "kandace-hands-up",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": 11.5,
+              "armAdjustment": "raised",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.88682,
+              "leftHand": [
+                0.08572,
+                0.99583,
+                0.03884
+              ],
+              "rightHand": [
+                -0.19041,
+                1.01754,
+                0.03883
+              ],
+              "head": [
+                -0.04192,
+                0.81264,
+                -0.01539
+              ],
+              "headTop": [
+                -0.04497,
+                0.92902,
+                -0.02203
+              ],
+              "chest": [
+                -0.05231,
+                0.69679,
+                -0.00745
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 4391,
+              "primitives": 5
+            }
+          },
+          {
+            "name": "kandace-groove",
+            "triangles": 4393,
+            "extras": {
+              "name": "kandace-groove",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": 3.5,
+              "armAdjustment": "source-animation",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 0.98977,
+              "leftHand": [
+                0.31918,
+                0.56663,
+                0.0724
+              ],
+              "rightHand": [
+                -0.26036,
+                0.55322,
+                -0.0345
+              ],
+              "head": [
+                0.03409,
+                0.83846,
+                0.01458
+              ],
+              "headTop": [
+                0.0555,
+                0.95025,
+                -0.01077
+              ],
+              "chest": [
+                0.01475,
+                0.70293,
+                0.00899
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 4393,
+              "primitives": 5
+            }
+          },
+          {
+            "name": "kandace-work",
+            "triangles": 4785,
+            "extras": {
+              "name": "kandace-work",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": null,
+              "armAdjustment": "work",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.07212,
+                0.58392,
+                0.19368
+              ],
+              "rightHand": [
+                -0.07218,
+                0.58389,
+                0.19361
+              ],
+              "head": [
+                -0.00002,
+                0.88338,
+                0.04676
+              ],
+              "headTop": [
+                -0.00002,
+                1,
+                0.04676
+              ],
+              "chest": [
+                -0.00002,
+                0.75016,
+                0.04546
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 4785,
+              "primitives": 5
+            }
+          },
+          {
+            "name": "kandace-stand",
+            "triangles": 4388,
+            "extras": {
+              "name": "kandace-stand",
+              "source": "kandace",
+              "sourceFile": "dancer4.glb",
+              "poseTime": null,
+              "armAdjustment": "stand",
+              "standingHeight": 1,
+              "sourceStandingHeight": 3.19904,
+              "facing": "+Z",
+              "forward": [
+                0,
+                0,
+                1
+              ],
+              "toeForwardDot": 1,
+              "leftHand": [
+                0.09703,
+                0.4926,
+                0.04742
+              ],
+              "rightHand": [
+                -0.09707,
+                0.49263,
+                0.04741
+              ],
+              "head": [
+                -0.00002,
+                0.88338,
+                0.04676
+              ],
+              "headTop": [
+                -0.00002,
+                1,
+                0.04676
+              ],
+              "chest": [
+                -0.00002,
+                0.75016,
+                0.04546
+              ],
+              "sourceTriangles": 40715,
+              "attribution": {
+                "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+                "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+                "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+                "title": "Kandace Dancing"
+              },
+              "triangles": 4388,
+              "primitives": 5
+            }
+          }
+        ]
+      },
+      "bufferViews": [
+        {
+          "sourceIndex": 10,
+          "outputIndex": 0,
+          "byteLength": 328808,
+          "sha256": "c5e8d6676f8521b031f91140bf76b3aac58fa1169151f05bf9c3110b5f483dbf"
+        },
+        {
+          "sourceIndex": 11,
+          "outputIndex": 1,
+          "byteLength": 89664,
+          "sha256": "e911c77b1783b6335858b2994ec451bc80e1f9af50f9d927abb55443de528525"
+        },
+        {
+          "sourceIndex": 12,
+          "outputIndex": 2,
+          "byteLength": 89792,
+          "sha256": "7aa7edc98881590654362790c6421c20909624732354f8ff7ce925fe2dee1bae"
+        },
+        {
+          "sourceIndex": 13,
+          "outputIndex": 3,
+          "byteLength": 96896,
+          "sha256": "a7f845a6949aa8e8af7fd8679e2891d48bd0e42d5a00802beee92daf2f9803a7"
+        },
+        {
+          "sourceIndex": 14,
+          "outputIndex": 4,
+          "byteLength": 89440,
+          "sha256": "d9d4ef2db73dbe234e4a57324be8045653ccb62e21b581ba91e15c259672eca8"
+        },
+        {
+          "sourceIndex": 15,
+          "outputIndex": 5,
+          "byteLength": 7776,
+          "sha256": "f9dcd628d80fab2abda818db22d940c65279d93a5cc45f6b7e5be7750026c74c"
+        },
+        {
+          "sourceIndex": 16,
+          "outputIndex": 6,
+          "byteLength": 6752,
+          "sha256": "d75ddf734534be599637e28a01e5d3ec3a296e15716c3134ce7d518268c00f82"
+        },
+        {
+          "sourceIndex": 17,
+          "outputIndex": 7,
+          "byteLength": 11640,
+          "sha256": "a01b7880a9ece783024c5851c85c95c7a3a8a35794ff790d083ea5f36c2f68ef"
+        },
+        {
+          "sourceIndex": 18,
+          "outputIndex": 8,
+          "byteLength": 3968,
+          "sha256": "47b06ace778e02b0d76dcede1faaeef014b9bcf538f734e79b21b056d7b35076"
+        },
+        {
+          "sourceIndex": 19,
+          "outputIndex": 9,
+          "byteLength": 23776,
+          "sha256": "f580c69653aab7cfa2cef6831adb9da09e1db8d2bcaa5f831d3302a33eca2d5f"
+        },
+        {
+          "sourceIndex": 20,
+          "outputIndex": 10,
+          "byteLength": 49056,
+          "sha256": "b7099d7a7703cd6d6d47d4008732a686447f603371caf4d523146f88c8b4166a"
+        },
+        {
+          "sourceIndex": 21,
+          "outputIndex": 11,
+          "byteLength": 7776,
+          "sha256": "d137e0a8f0e49ee94fb1fdc991367af9a9f58fcb86cb3aebf976bbb1431248ee"
+        },
+        {
+          "sourceIndex": 22,
+          "outputIndex": 12,
+          "byteLength": 6720,
+          "sha256": "0ddddcb2d60f820d6727d3640af50f18afebc34ffda36218997e73c42b088c09"
+        },
+        {
+          "sourceIndex": 23,
+          "outputIndex": 13,
+          "byteLength": 11640,
+          "sha256": "2c72ea1e7b6dba760044fd2b30d4fd10e8d75f2d5f767c9edae5b25fa4b03e27"
+        },
+        {
+          "sourceIndex": 24,
+          "outputIndex": 14,
+          "byteLength": 4000,
+          "sha256": "4d02dcf77a3651f5c8ab0138926c11046e4302d91fbd44af7dbd4325db428875"
+        },
+        {
+          "sourceIndex": 25,
+          "outputIndex": 15,
+          "byteLength": 23200,
+          "sha256": "119c80e7abb01dc031d28e0f4c0e9dc154418192c3178d9fdfd454f7aa69a562"
+        },
+        {
+          "sourceIndex": 26,
+          "outputIndex": 16,
+          "byteLength": 48928,
+          "sha256": "223332071b049f9fd05ac2131714d2bba758125c25c3678a8b552b86e3db8d6e"
+        },
+        {
+          "sourceIndex": 27,
+          "outputIndex": 17,
+          "byteLength": 8448,
+          "sha256": "d34a44a4442b6cde11a203c46bf55edcb966cddd0e4584b700afbd0c3801e7bf"
+        },
+        {
+          "sourceIndex": 28,
+          "outputIndex": 18,
+          "byteLength": 7296,
+          "sha256": "10f1a08a1c3fc01d7d32340d9d7770dc8bdd625eb1a0b8ee87c24ca9d566f261"
+        },
+        {
+          "sourceIndex": 29,
+          "outputIndex": 19,
+          "byteLength": 12504,
+          "sha256": "ca3de421db8f29b56aef358f6df3dd1f6ba6203ba06486ba04dced4a3d4a3cfd"
+        },
+        {
+          "sourceIndex": 30,
+          "outputIndex": 20,
+          "byteLength": 4352,
+          "sha256": "8c41f733fc12b9d921218bc484b4531b15916aaae6cc98ff845c42406c4c2452"
+        },
+        {
+          "sourceIndex": 31,
+          "outputIndex": 21,
+          "byteLength": 23424,
+          "sha256": "1f06e25f5242dc87e3af3ffe12406b77b3778c7e393a6d4634359f19f19daee0"
+        },
+        {
+          "sourceIndex": 32,
+          "outputIndex": 22,
+          "byteLength": 53152,
+          "sha256": "0ede3e99659fc5aa5a6db7daf5709a0ce342766a267ffca13c8d1a8a033714eb"
+        },
+        {
+          "sourceIndex": 33,
+          "outputIndex": 23,
+          "byteLength": 7776,
+          "sha256": "898243c855622b24727101817cd23c5d627f0906e99d3af7cbb3eb6b9edfa1b7"
+        },
+        {
+          "sourceIndex": 34,
+          "outputIndex": 24,
+          "byteLength": 6784,
+          "sha256": "8ca3de39e88d29bb5c362fe75dc7776a9f43c721935811fcf0b2606567c4c7d7"
+        },
+        {
+          "sourceIndex": 35,
+          "outputIndex": 25,
+          "byteLength": 11664,
+          "sha256": "c72788b865b18ddce718b84a6f62eaaa1f38750207f4ec1bc4de3b5d532d16a3"
+        },
+        {
+          "sourceIndex": 36,
+          "outputIndex": 26,
+          "byteLength": 4064,
+          "sha256": "6be66aa02d210e043d2a6e3b3f470e5c5d5be03410ffc48d39607e14c26f960f"
+        },
+        {
+          "sourceIndex": 37,
+          "outputIndex": 27,
+          "byteLength": 23136,
+          "sha256": "da44c9c90d82e00f80613951ada7127ea1a6a37a56ae2e13cfaf783c6d25ae74"
+        },
+        {
+          "sourceIndex": 38,
+          "outputIndex": 28,
+          "byteLength": 49376,
+          "sha256": "e74c564e1c0ecab615c661c72a495105e03f609bfb561b845ced1b75012ba10c"
+        },
+        {
+          "sourceIndex": 39,
+          "outputIndex": 29,
+          "byteLength": 8608,
+          "sha256": "5c5cf006cba14fbf9507c52c3dfa0aaf9df8332c397b09370310ce4fc88d8114"
+        },
+        {
+          "sourceIndex": 40,
+          "outputIndex": 30,
+          "byteLength": 21408,
+          "sha256": "217d1ca07da99b29f862d0d03bbb01efde77497595658c72d2d583c5265f6d86"
+        },
+        {
+          "sourceIndex": 41,
+          "outputIndex": 31,
+          "byteLength": 16576,
+          "sha256": "6c0cebd05f7182a21f27c7b37bebac1e6c1d143064cd7b1c7a160b01ece18bd3"
+        },
+        {
+          "sourceIndex": 42,
+          "outputIndex": 32,
+          "byteLength": 7552,
+          "sha256": "e8f1e88699d2751850812c62f5da61297a4e302c26c37b23b78498d8bb62bb53"
+        },
+        {
+          "sourceIndex": 43,
+          "outputIndex": 33,
+          "byteLength": 58080,
+          "sha256": "628678f623cf5e6010f36da5abdda26b539bf2dcc0a16d64a98c18075ecd515d"
+        },
+        {
+          "sourceIndex": 44,
+          "outputIndex": 34,
+          "byteLength": 8576,
+          "sha256": "6a3b83b2a2360e33ac1b15f2b371948d64c054b2bfe7053bbf8b86abb804525a"
+        },
+        {
+          "sourceIndex": 45,
+          "outputIndex": 35,
+          "byteLength": 21216,
+          "sha256": "e3914ddf2595aa134bd069fe623233bb65e62ac135168a1a760662762df822b0"
+        },
+        {
+          "sourceIndex": 46,
+          "outputIndex": 36,
+          "byteLength": 16768,
+          "sha256": "822a96d0a1f8e092b13c09c05a37b8673b71329d7228e75e1c8167df70aeb81b"
+        },
+        {
+          "sourceIndex": 47,
+          "outputIndex": 37,
+          "byteLength": 7488,
+          "sha256": "f0fd6a97e92cd8fce7e8ab6115215c6e177c802d769970a8774b77becb1abd80"
+        },
+        {
+          "sourceIndex": 48,
+          "outputIndex": 38,
+          "byteLength": 58080,
+          "sha256": "550fdf123d3715b695a1b9474e3b4bd8aec0d650218608bc47a79b81fa39140d"
+        },
+        {
+          "sourceIndex": 49,
+          "outputIndex": 39,
+          "byteLength": 9216,
+          "sha256": "9d943e5cc090bca4314c8cd7998d31d83d523d11591949b3ab603ec992d91649"
+        },
+        {
+          "sourceIndex": 50,
+          "outputIndex": 40,
+          "byteLength": 22880,
+          "sha256": "348f37e98bbd414efcf7aa4ccfd42c08ec70dec56b9cada5df4c67c0fc0325e5"
+        },
+        {
+          "sourceIndex": 51,
+          "outputIndex": 41,
+          "byteLength": 17728,
+          "sha256": "b42f397b724b4bf5e87235bfa83956b006a1ceaaeefdc6a75a284bb54999913f"
+        },
+        {
+          "sourceIndex": 52,
+          "outputIndex": 42,
+          "byteLength": 8192,
+          "sha256": "60520d859f78d4a82f28bb78c93ccc6a3f480d6efe1181b8654bef223a482d48"
+        },
+        {
+          "sourceIndex": 53,
+          "outputIndex": 43,
+          "byteLength": 62304,
+          "sha256": "705f227317ee215e8faf532edbb6069ba13e9f9615b6d854fc3083188bc875ae"
+        },
+        {
+          "sourceIndex": 54,
+          "outputIndex": 44,
+          "byteLength": 8608,
+          "sha256": "e266a61203f36cd7a2d95515b594c4c5964a0630335bdac7b46077c94689cfe5"
+        },
+        {
+          "sourceIndex": 55,
+          "outputIndex": 45,
+          "byteLength": 21280,
+          "sha256": "9a24c22f4d545644fe05a515cd59d07e3d41c629cf38419ee9260558ae3794b7"
+        },
+        {
+          "sourceIndex": 56,
+          "outputIndex": 46,
+          "byteLength": 16704,
+          "sha256": "1a82d7103eab5b0f886b7f1247b8e0554e1f76df04bc5a798849e3301b26b9e4"
+        },
+        {
+          "sourceIndex": 57,
+          "outputIndex": 47,
+          "byteLength": 7584,
+          "sha256": "222ad36f452a8e53b9999a3e6f227240b7159237f3f3ba861a01c54dc3f30b22"
+        },
+        {
+          "sourceIndex": 58,
+          "outputIndex": 48,
+          "byteLength": 58176,
+          "sha256": "937b22deee594360caab55f64aae2728645284b5e3cfd044e5f604565b6ae1e0"
+        }
+      ],
+      "removedImageBufferViews": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sourceImages": [
+        {
+          "index": 0,
+          "bytes": 246396,
+          "sha256": "2f29f8681659b04ccc8d41245a18943f038cab0ecc8ac935a7c5e7cb476342ee",
+          "mimeType": "image/webp",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 0,
+          "sharedUri": "b56845290c34e1004f59f07c31eabe0a7a9b70afc305b14f69a514a097d3dee4.jpg"
+        },
+        {
+          "index": 1,
+          "bytes": 224112,
+          "sha256": "7a83b1001e3577ce7a7787976a555b230e3eb77d9a76ac703ba70fb611c1b0e6",
+          "mimeType": "image/webp",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 1,
+          "sharedUri": "1d94323d7a55523a2b2937a37f3060f30563d09aed87c7da6bd5391e35bddbf5.jpg"
+        },
+        {
+          "index": 2,
+          "bytes": 5510,
+          "sha256": "31a3ad2aa305e8a23da7cf3e8333cf27e05071168276db41009b2a4bcd5aa02e",
+          "mimeType": "image/webp",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 2,
+          "sharedUri": "54bd84eba9256d830e9fdcaac2194997388219a5021819f3ad11b9d8f20258a9.png"
+        },
+        {
+          "index": 3,
+          "bytes": 69834,
+          "sha256": "caec6ff4b2e0579d54e6368e8f20f78451164b33ff1c5b5c28f2d6d2d5115e5b",
+          "mimeType": "image/webp",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 3,
+          "sharedUri": "3697f7d41dab1c5384653a5f7be8d5dd3eb0548a01a9f990c6656824793c812a.png"
+        },
+        {
+          "index": 4,
+          "bytes": 80982,
+          "sha256": "176c11e7a3e1bfcea8e75c3212e5a9f68e5de24d22cc86b36cc623d218f0b692",
+          "mimeType": "image/webp",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 4,
+          "sharedUri": "a612e90caf40dd12cf49a9473cd577c52f02c68f12040c380bcd5f1aa2236ad9.png"
+        },
+        {
+          "index": 5,
+          "bytes": 104944,
+          "sha256": "cfa72f1854da776e75be720246e154c5f5873541723d8f0dc64726f25d76c9cd",
+          "mimeType": "image/webp",
+          "width": 1024,
+          "height": 1024,
+          "heroImageIndex": 5,
+          "sharedUri": "4a1354009ec3a2222a03e41eb3b1c4cc0df6e98ce70b48335f7d94c4107878a2.png"
+        },
+        {
+          "index": 6,
+          "bytes": 59524,
+          "sha256": "1ee060ceaf2eefe83a8032e8255d1d97a6fcdd56ef237b5fe699c168ba22df0e",
+          "mimeType": "image/webp",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 6,
+          "sharedUri": "72d6026ff8985c18c7dd25333165e96278d150c15975c66928fb6a4a82ddae44.png"
+        },
+        {
+          "index": 7,
+          "bytes": 129370,
+          "sha256": "3a69869eadd19b02064638722e479f803a823c8ccd08674e798d124006bf1206",
+          "mimeType": "image/webp",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 7,
+          "sharedUri": "16349a091e0f933866f9e87754333d8f9e54d129e85fb95e455bcc2fdf2f2c2c.png"
+        },
+        {
+          "index": 8,
+          "bytes": 47548,
+          "sha256": "2353eb8e0ddad562854dcb5a16a94c9703d5cf15de3c0774aa19174b6edb0098",
+          "mimeType": "image/webp",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 8,
+          "sharedUri": "29021214825f1d87b7a89853bdd9453924af2b64abbcba55b564d56feb096b51.png"
+        },
+        {
+          "index": 9,
+          "bytes": 12180,
+          "sha256": "4ff70d3708f2f695d50f4eebb8fa2ae3faaf210bbcd037a8f3cbd7abb92a97ff",
+          "mimeType": "image/webp",
+          "width": 512,
+          "height": 512,
+          "heroImageIndex": 9,
+          "sharedUri": "67e278a47f0dd05880c9798d5fe0f5bc31e62614aca37a863ab77430ba5666a4.png"
+        }
+      ]
+    }
+  },
+  "verifiedInvariants": [
+    "Pinned source GLB SHA256 and recorded source-attribution SHA256",
+    "Material-name plus texture-slot bijection; dimensions and sampler/color/UV compatibility",
+    "All texture-info texCoord values are absent or zero; no KHR_texture_transform or clone-dependent UV usage",
+    "Hero compressed image bytes unchanged; ten content-addressed sibling texture files",
+    "Texture keys unique within each profile and identical across compatible profile slots",
+    "Exact surviving bufferView payloads/settings; accessor changes limited to bufferView indices",
+    "Exact meshes, material settings, samplers, nodes, all pose extras/anchors, scenes and asset metadata",
+    "No skins, animations, morph targets, skeletal attributes or embedded output images",
+    "Triangle, GLB, shared image, decoded mip and combined asset byte budgets",
+    "Deterministic output GLB checksums and exact expected output-directory inventory"
+  ]
+}

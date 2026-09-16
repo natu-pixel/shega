@@ -1,0 +1,155 @@
+{
+  "file": "/models/lite/meat.glb",
+  "original": "/models/meat.glb",
+  "attribution": {
+    "author": "usefulspunforsup (https://sketchfab.com/noemyssima7)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/grilled-chicken-steak-9797e54671094233bcfa469f616bd7df",
+    "title": "Grilled Chicken Steak"
+  },
+  "sourceAssetMetadata": {
+    "extras": {
+      "author": "usefulspunforsup (https://sketchfab.com/noemyssima7)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/grilled-chicken-steak-9797e54671094233bcfa469f616bd7df",
+      "title": "Grilled Chicken Steak"
+    },
+    "generator": "Sketchfab-14.55.0",
+    "version": "2.0"
+  },
+  "changes": [
+    "Textures resized to at most 512px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+    "Static mesh simplified with authored normals/UVs retained and local/world bounds extrema locked; scene transforms and names unchanged."
+  ],
+  "sourceSHA256": "2e86cce836911e7b3c387b7664fc889724bc4c86ec3e66a6a0f23b5806e47284",
+  "outputSHA256": "a8745cda592048debbcbd02782a9a6db00d9ae80f5b67a337cd8a4ebd1d81ea6",
+  "before": {
+    "fileBytes": 15127184,
+    "triangles": 326432,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 512,
+        "fileBytes": 535243,
+        "decodedRGBABytes": 2097152,
+        "decodedRGBAWithMipmapsBytes": 2796204
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 512,
+        "fileBytes": 192587,
+        "decodedRGBABytes": 2097152,
+        "decodedRGBAWithMipmapsBytes": 2796204
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 512,
+        "fileBytes": 975445,
+        "decodedRGBABytes": 2097152,
+        "decodedRGBAWithMipmapsBytes": 2796204
+      }
+    ],
+    "decodedRGBABytes": 6291456,
+    "decodedRGBAWithMipmapsBytes": 8388612
+  },
+  "after": {
+    "fileBytes": 989116,
+    "triangles": 13991,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 256,
+        "fileBytes": 128106,
+        "decodedRGBABytes": 524288,
+        "decodedRGBAWithMipmapsBytes": 699052
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 256,
+        "fileBytes": 61200,
+        "decodedRGBABytes": 524288,
+        "decodedRGBAWithMipmapsBytes": 699052
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 256,
+        "fileBytes": 262446,
+        "decodedRGBABytes": 524288,
+        "decodedRGBAWithMipmapsBytes": 699052
+      }
+    ],
+    "decodedRGBABytes": 1572864,
+    "decodedRGBAWithMipmapsBytes": 2097156
+  },
+  "geometry": [
+    {
+      "mesh": 0,
+      "before": 129673,
+      "after": 5559,
+      "measuredError": 0.0011952660279348493
+    },
+    {
+      "mesh": 1,
+      "before": 125890,
+      "after": 5394,
+      "measuredError": 0.0011957973474636674
+    },
+    {
+      "mesh": 2,
+      "before": 70869,
+      "after": 3038,
+      "measuredError": 0.0009278602083213627
+    }
+  ],
+  "verification": {
+    "gltfLoader": "passed",
+    "imageDecode": "passed",
+    "exactNodeMetadata": true,
+    "sourceBounds": {
+      "min": [
+        -0.7070084467542721,
+        -0.05470291999713124,
+        -0.8287128433171411
+      ],
+      "max": [
+        0.5278227336513878,
+        0.09305705980402892,
+        1.008810814299597
+      ]
+    },
+    "outputBounds": {
+      "min": [
+        -0.7070084467542721,
+        -0.05470291999713124,
+        -0.8287128433171411
+      ],
+      "max": [
+        0.5278227336513878,
+        0.09305705980402892,
+        1.008810814299597
+      ]
+    },
+    "maxBoundsDelta": 0,
+    "sampledClips": 0,
+    "clipSamples": [],
+    "exactAccessors": 0
+  }
+}

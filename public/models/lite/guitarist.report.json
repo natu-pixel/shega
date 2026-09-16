@@ -1,0 +1,170 @@
+{
+  "file": "/models/lite/guitarist.glb",
+  "original": "/models/guitarist.glb",
+  "attribution": {
+    "author": "LasquetiSpice (https://sketchfab.com/LasquetiSpice)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/animated-musical-trem-playing-guitar-loop-7dde986b68834de6b5a9deff6819d3f1",
+    "title": "Animated Musical Trem Playing Guitar Loop"
+  },
+  "sourceAssetMetadata": {
+    "extras": {
+      "author": "LasquetiSpice (https://sketchfab.com/LasquetiSpice)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/animated-musical-trem-playing-guitar-loop-7dde986b68834de6b5a9deff6819d3f1",
+      "title": "Animated Musical Trem Playing Guitar Loop"
+    },
+    "generator": "Sketchfab-12.74.0",
+    "version": "2.0"
+  },
+  "changes": [
+    "Textures resized to at most 768px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+    "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+  ],
+  "sourceSHA256": "8401ebbe777e4531913084c187b0d0dfa23f4bc31cbcb28a5d3deee68a103e51",
+  "outputSHA256": "293e816f56cf7dc8a3fbb2fe7a7385e98197cef5731708d4cc591d91a3f513a4",
+  "before": {
+    "fileBytes": 3906088,
+    "triangles": 23396,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 1041857,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 951213,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 332541,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 3,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 108251,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      }
+    ],
+    "decodedRGBABytes": 16777216,
+    "decodedRGBAWithMipmapsBytes": 22369616
+  },
+  "after": {
+    "fileBytes": 2771632,
+    "triangles": 23396,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 506300,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 474330,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 234996,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      },
+      {
+        "index": 3,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 768,
+        "height": 768,
+        "fileBytes": 84106,
+        "decodedRGBABytes": 2359296,
+        "decodedRGBAWithMipmapsBytes": 3145720
+      }
+    ],
+    "decodedRGBABytes": 9437184,
+    "decodedRGBAWithMipmapsBytes": 12582880
+  },
+  "geometry": [],
+  "verification": {
+    "gltfLoader": "passed",
+    "imageDecode": "passed",
+    "exactNodeMetadata": true,
+    "sourceBounds": {
+      "min": [
+        -1.4701304012739451,
+        -0.0021469548759413546,
+        -0.25083626678818854
+      ],
+      "max": [
+        1.4591044002681826,
+        2.9765459507726417,
+        0.9434776138387447
+      ]
+    },
+    "outputBounds": {
+      "min": [
+        -1.4701304012739451,
+        -0.0021469548759413546,
+        -0.25083626678818854
+      ],
+      "max": [
+        1.4591044002681826,
+        2.9765459507726417,
+        0.9434776138387447
+      ]
+    },
+    "maxBoundsDelta": 0,
+    "sampledClips": 1,
+    "clipSamples": [
+      {
+        "name": "Animation",
+        "duration": 5.4666666984558105,
+        "tracks": 90,
+        "times": [
+          0,
+          1.3666666746139526,
+          2.7333333492279053,
+          4.100000023841858,
+          5.46666569845581
+        ]
+      }
+    ],
+    "exactAccessors": 195,
+    "performerGeometryAndAnimationUnchanged": true
+  }
+}

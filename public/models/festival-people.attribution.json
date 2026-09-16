@@ -1,0 +1,690 @@
+{
+  "asset": "/models/festival-people.glb",
+  "profile": "standard",
+  "budgets": {
+    "trianglesPerPose": 5000,
+    "textureSize": 1024,
+    "bytes": 3500000
+  },
+  "license": "CC-BY-4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sources": [
+    {
+      "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+      "title": "Manuel Animated 001 - 3D Dancing Man"
+    },
+    {
+      "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+      "title": "Woman In Red"
+    },
+    {
+      "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+      "title": "Kandace Dancing"
+    }
+  ],
+  "modifications": "Static pose baking, original smooth normals, arm adjustments, 5000-triangle budget, native textures capped at 1024px, PBR lighting, preserved alpha hair, shared grounded one-metre normalization and +Z facing.",
+  "textureNote": "The existing source textures are at most 1024px; hero retains original image bytes without invented detail or skin tinting.",
+  "units": "Scale every variant by the desired adult standing height in metres. Raised hands may extend beyond this height.",
+  "textures": 10,
+  "maxTextureSize": 1024,
+  "materials": 11,
+  "animations": 0,
+  "skins": 0,
+  "bytes": 2598188,
+  "variants": [
+    {
+      "name": "manuel-hands-up",
+      "source": "manuel",
+      "sourceFile": "dancer.glb",
+      "poseTime": 29,
+      "armAdjustment": "source-animation",
+      "standingHeight": 1,
+      "sourceStandingHeight": 185.17316,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.99071,
+      "leftHand": [
+        0.01815,
+        1.10632,
+        0.12803
+      ],
+      "rightHand": [
+        -0.0403,
+        1.10893,
+        0.10375
+      ],
+      "head": [
+        -0.01668,
+        0.88728,
+        0.06563
+      ],
+      "headTop": [
+        0.03752,
+        0.9847,
+        0.03185
+      ],
+      "chest": [
+        -0.02045,
+        0.80267,
+        0.05722
+      ],
+      "sourceTriangles": 23406,
+      "attribution": {
+        "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+        "title": "Manuel Animated 001 - 3D Dancing Man"
+      },
+      "triangles": 4399,
+      "primitives": 1,
+      "boundsY": [
+        0,
+        1.15952
+      ]
+    },
+    {
+      "name": "manuel-groove",
+      "source": "manuel",
+      "sourceFile": "dancer.glb",
+      "poseTime": 9.5,
+      "armAdjustment": "source-animation",
+      "standingHeight": 1,
+      "sourceStandingHeight": 185.17316,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.87974,
+      "leftHand": [
+        0.03117,
+        0.6483,
+        0.16275
+      ],
+      "rightHand": [
+        -0.07897,
+        0.72615,
+        0.19611
+      ],
+      "head": [
+        -0.04815,
+        0.89116,
+        0.10745
+      ],
+      "headTop": [
+        -0.07987,
+        1.00072,
+        0.08379
+      ],
+      "chest": [
+        -0.05181,
+        0.75444,
+        0.09808
+      ],
+      "sourceTriangles": 23406,
+      "attribution": {
+        "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+        "title": "Manuel Animated 001 - 3D Dancing Man"
+      },
+      "triangles": 4399,
+      "primitives": 1,
+      "boundsY": [
+        0,
+        1.01484
+      ]
+    },
+    {
+      "name": "manuel-work",
+      "source": "manuel",
+      "sourceFile": "dancer.glb",
+      "poseTime": 0,
+      "armAdjustment": "work",
+      "standingHeight": 1,
+      "sourceStandingHeight": 185.17316,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.98128,
+      "leftHand": [
+        0.0939,
+        0.58115,
+        0.20702
+      ],
+      "rightHand": [
+        -0.10868,
+        0.57132,
+        0.20505
+      ],
+      "head": [
+        -0.01763,
+        0.88351,
+        0.07233
+      ],
+      "headTop": [
+        -0.01763,
+        1,
+        0.07233
+      ],
+      "chest": [
+        -0.00721,
+        0.74694,
+        0.06422
+      ],
+      "sourceTriangles": 23406,
+      "attribution": {
+        "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+        "title": "Manuel Animated 001 - 3D Dancing Man"
+      },
+      "triangles": 4799,
+      "primitives": 1,
+      "boundsY": [
+        0,
+        0.99996
+      ]
+    },
+    {
+      "name": "manuel-stand",
+      "source": "manuel",
+      "sourceFile": "dancer.glb",
+      "poseTime": null,
+      "armAdjustment": "stand",
+      "standingHeight": 1,
+      "sourceStandingHeight": 185.17316,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.98128,
+      "leftHand": [
+        0.11788,
+        0.49405,
+        0.06541
+      ],
+      "rightHand": [
+        -0.13235,
+        0.48554,
+        0.06514
+      ],
+      "head": [
+        -0.01763,
+        0.88351,
+        0.07233
+      ],
+      "headTop": [
+        -0.01763,
+        1,
+        0.07233
+      ],
+      "chest": [
+        -0.00721,
+        0.74694,
+        0.06422
+      ],
+      "sourceTriangles": 23406,
+      "attribution": {
+        "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+        "title": "Manuel Animated 001 - 3D Dancing Man"
+      },
+      "triangles": 4400,
+      "primitives": 1,
+      "boundsY": [
+        0,
+        0.99996
+      ]
+    },
+    {
+      "name": "red-hands-up",
+      "source": "red",
+      "sourceFile": "dancer3.glb",
+      "poseTime": 7.5,
+      "armAdjustment": "raised",
+      "standingHeight": 1,
+      "sourceStandingHeight": 179.17999,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.99153,
+      "leftHand": [
+        0.14513,
+        0.91986,
+        0.04278
+      ],
+      "rightHand": [
+        -0.15321,
+        0.90682,
+        0.04264
+      ],
+      "head": [
+        -0.00638,
+        0.78213,
+        0.0091
+      ],
+      "headTop": [
+        0.0024,
+        0.86521,
+        0.02524
+      ],
+      "chest": [
+        -0.00403,
+        0.65273,
+        0.00951
+      ],
+      "sourceTriangles": 44198,
+      "attribution": {
+        "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+        "title": "Woman In Red"
+      },
+      "triangles": 4632,
+      "primitives": 6,
+      "boundsY": [
+        0,
+        1.02373
+      ]
+    },
+    {
+      "name": "red-groove",
+      "source": "red",
+      "sourceFile": "dancer3.glb",
+      "poseTime": 2,
+      "armAdjustment": "source-animation",
+      "standingHeight": 1,
+      "sourceStandingHeight": 179.17999,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.99987,
+      "leftHand": [
+        0.22767,
+        0.60225,
+        0.11278
+      ],
+      "rightHand": [
+        -0.1639,
+        0.5364,
+        0.06162
+      ],
+      "head": [
+        -0.0017,
+        0.84513,
+        0.03715
+      ],
+      "headTop": [
+        0.00688,
+        0.92787,
+        0.05508
+      ],
+      "chest": [
+        -0.00399,
+        0.70312,
+        0.03935
+      ],
+      "sourceTriangles": 44198,
+      "attribution": {
+        "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+        "title": "Woman In Red"
+      },
+      "triangles": 4618,
+      "primitives": 6,
+      "boundsY": [
+        0,
+        0.92625
+      ]
+    },
+    {
+      "name": "red-work",
+      "source": "red",
+      "sourceFile": "dancer3.glb",
+      "poseTime": null,
+      "armAdjustment": "work",
+      "standingHeight": 1,
+      "sourceStandingHeight": 179.17999,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 1,
+      "leftHand": [
+        0.08944,
+        0.63094,
+        0.13476
+      ],
+      "rightHand": [
+        -0.08952,
+        0.63122,
+        0.13433
+      ],
+      "head": [
+        0.00001,
+        0.91491,
+        0.0135
+      ],
+      "headTop": [
+        0.00001,
+        1,
+        0.0135
+      ],
+      "chest": [
+        -0.00001,
+        0.76391,
+        0.02291
+      ],
+      "sourceTriangles": 44198,
+      "attribution": {
+        "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+        "title": "Woman In Red"
+      },
+      "triangles": 4977,
+      "primitives": 6,
+      "boundsY": [
+        0,
+        0.99471
+      ]
+    },
+    {
+      "name": "red-stand",
+      "source": "red",
+      "sourceFile": "dancer3.glb",
+      "poseTime": null,
+      "armAdjustment": "stand",
+      "standingHeight": 1,
+      "sourceStandingHeight": 179.17999,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 1,
+      "leftHand": [
+        0.10884,
+        0.56075,
+        0.02006
+      ],
+      "rightHand": [
+        -0.10885,
+        0.5613,
+        0.02
+      ],
+      "head": [
+        0.00001,
+        0.91491,
+        0.0135
+      ],
+      "headTop": [
+        0.00001,
+        1,
+        0.0135
+      ],
+      "chest": [
+        -0.00001,
+        0.76391,
+        0.02291
+      ],
+      "sourceTriangles": 44198,
+      "attribution": {
+        "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+        "title": "Woman In Red"
+      },
+      "triangles": 4615,
+      "primitives": 6,
+      "boundsY": [
+        0,
+        0.99471
+      ]
+    },
+    {
+      "name": "kandace-hands-up",
+      "source": "kandace",
+      "sourceFile": "dancer4.glb",
+      "poseTime": 11.5,
+      "armAdjustment": "raised",
+      "standingHeight": 1,
+      "sourceStandingHeight": 3.19904,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.88682,
+      "leftHand": [
+        0.08572,
+        0.99583,
+        0.03884
+      ],
+      "rightHand": [
+        -0.19041,
+        1.01754,
+        0.03883
+      ],
+      "head": [
+        -0.04192,
+        0.81264,
+        -0.01539
+      ],
+      "headTop": [
+        -0.04497,
+        0.92902,
+        -0.02203
+      ],
+      "chest": [
+        -0.05231,
+        0.69679,
+        -0.00745
+      ],
+      "sourceTriangles": 40715,
+      "attribution": {
+        "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+        "title": "Kandace Dancing"
+      },
+      "triangles": 4391,
+      "primitives": 5,
+      "boundsY": [
+        0,
+        1.08176
+      ]
+    },
+    {
+      "name": "kandace-groove",
+      "source": "kandace",
+      "sourceFile": "dancer4.glb",
+      "poseTime": 3.5,
+      "armAdjustment": "source-animation",
+      "standingHeight": 1,
+      "sourceStandingHeight": 3.19904,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 0.98977,
+      "leftHand": [
+        0.31918,
+        0.56663,
+        0.0724
+      ],
+      "rightHand": [
+        -0.26036,
+        0.55322,
+        -0.0345
+      ],
+      "head": [
+        0.03409,
+        0.83846,
+        0.01458
+      ],
+      "headTop": [
+        0.0555,
+        0.95025,
+        -0.01077
+      ],
+      "chest": [
+        0.01475,
+        0.70293,
+        0.00899
+      ],
+      "sourceTriangles": 40715,
+      "attribution": {
+        "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+        "title": "Kandace Dancing"
+      },
+      "triangles": 4393,
+      "primitives": 5,
+      "boundsY": [
+        0,
+        0.95361
+      ]
+    },
+    {
+      "name": "kandace-work",
+      "source": "kandace",
+      "sourceFile": "dancer4.glb",
+      "poseTime": null,
+      "armAdjustment": "work",
+      "standingHeight": 1,
+      "sourceStandingHeight": 3.19904,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 1,
+      "leftHand": [
+        0.07212,
+        0.58392,
+        0.19368
+      ],
+      "rightHand": [
+        -0.07218,
+        0.58389,
+        0.19361
+      ],
+      "head": [
+        -0.00002,
+        0.88338,
+        0.04676
+      ],
+      "headTop": [
+        -0.00002,
+        1,
+        0.04676
+      ],
+      "chest": [
+        -0.00002,
+        0.75016,
+        0.04546
+      ],
+      "sourceTriangles": 40715,
+      "attribution": {
+        "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+        "title": "Kandace Dancing"
+      },
+      "triangles": 4785,
+      "primitives": 5,
+      "boundsY": [
+        0,
+        0.99897
+      ]
+    },
+    {
+      "name": "kandace-stand",
+      "source": "kandace",
+      "sourceFile": "dancer4.glb",
+      "poseTime": null,
+      "armAdjustment": "stand",
+      "standingHeight": 1,
+      "sourceStandingHeight": 3.19904,
+      "facing": "+Z",
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "toeForwardDot": 1,
+      "leftHand": [
+        0.09703,
+        0.4926,
+        0.04742
+      ],
+      "rightHand": [
+        -0.09707,
+        0.49263,
+        0.04741
+      ],
+      "head": [
+        -0.00002,
+        0.88338,
+        0.04676
+      ],
+      "headTop": [
+        -0.00002,
+        1,
+        0.04676
+      ],
+      "chest": [
+        -0.00002,
+        0.75016,
+        0.04546
+      ],
+      "sourceTriangles": 40715,
+      "attribution": {
+        "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+        "title": "Kandace Dancing"
+      },
+      "triangles": 4388,
+      "primitives": 5,
+      "boundsY": [
+        0,
+        0.99897
+      ]
+    }
+  ]
+}

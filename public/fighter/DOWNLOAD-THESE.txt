@@ -1,0 +1,46 @@
+============================================================
+SHEGA EVENTS — 3D MODEL SHOPPING LIST
+============================================================
+Log into sketchfab.com (free account), open each link, press
+the "Download 3D Model" button, and choose the glTF option.
+
+Then unzip each download and copy ONLY the scene file into
+THIS folder (public\models) with the exact names below.
+
+------------------------------------------------------------
+1) THE CAGE (ETFC scene)
+------------------------------------------------------------
+Link:  https://sketchfab.com/3d-models/ufc-octagon-3b174beff6d949339b426c061a845763
+By:    Yanez-Designs (CC-BY — credit required)
+File:  save as  cage.glb
+
+------------------------------------------------------------
+2) THE FIGHTER (ETFC scene — loaded TWICE, mixed in the ring)
+------------------------------------------------------------
+Link:  https://sketchfab.com/3d-models/mma-fighter-c55844c086544f7f9a88915a5ebd4933
+By:    3dUVpro (CC-BY — credit required)
+File:  save as  fighter.glb
+
+------------------------------------------------------------
+3) THE CONCERT STAGE (Bermel scene — the QUEEN model you picked)
+------------------------------------------------------------
+Link:  https://sketchfab.com/3d-models/queen-rock-concert-ea26ac9c64bb4fe5a4ab84a9f20ee19b
+By:    dark_igorek (CC-BY — credit required)
+File:  save as  concert.glb
+
+============================================================
+FINAL RESULT SHOULD LOOK LIKE:
+
+  public\models\
+    cage.glb        <- the octagon
+    fighter.glb     <- one fighter (we clone him)
+    concert.glb     <- the rock concert stage
+
+When the files are here, tell Natik "models are in" and the
+code will be wired to load them automatically.
+============================================================
+
+If a download gives you scene.gltf + scene.bin + textures/
+instead of one .glb, just drop ALL of those files into this
+folder as-is and tell Natik — the wiring handles both.
+============================================================

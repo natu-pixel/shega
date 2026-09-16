@@ -1,0 +1,36 @@
+{
+  "assets": [
+    "/models/arena-fans/color.webp",
+    "/models/arena-fans/clothing.webp"
+  ],
+  "license": "CC-BY-4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "sources": [
+    {
+      "author": "Renderpeople (https://sketchfab.com/renderpeople)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/manuel-animated-001-3d-dancing-man-e65e0fef4e0743868c8d5bff36d61116",
+      "title": "Manuel Animated 001 - 3D Dancing Man"
+    },
+    {
+      "author": "reizibarrientos (https://sketchfab.com/reizibarrientos)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/woman-in-red-450e29de3c1541d78943e3265012ee48",
+      "title": "Woman In Red"
+    },
+    {
+      "author": "TrevAllCaps (https://sketchfab.com/trevBeat)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/kandace-dancing-29c2287df913415b98e9d1b0f8138468",
+      "title": "Kandace Dancing"
+    }
+  ],
+  "preparedSource": {
+    "url": "/models/festival-people-hero.glb",
+    "sha256": "47e61451881f5748a5ded8357ec5ac1e101f5b6779ee8de680ffe84073c8790b",
+    "attribution": "/models/festival-people-hero.attribution.json"
+  },
+  "sourceModifications": "Static pose baking, original smooth normals, arm adjustments, 24000-triangle budget, native textures capped at 2048px, PBR lighting, preserved alpha hair, shared grounded one-metre normalization and +Z facing.",
+  "modifications": "Eight orthographic yaw renders of six existing static hero poses; neutral studio lighting, sRGB color, original textured faces, cutout alpha hair with natural #302822 Hairmat, supersampling, transparent padded framing, fabric-only wardrobe masks, WebP compression. No new models or invented texture detail.",
+  "reproduction": "node scripts\\prepare-arena-fans.mjs; requires existing three, sharp, puppeteer-core and Chrome. Optional SHEGA_BROWSER_TOOLS points to existing node_modules; SHEGA_CHROME selects Chrome."
+}

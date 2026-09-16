@@ -1,0 +1,196 @@
+{
+  "file": "/models/lite/acacia-single.glb",
+  "original": "/models/acacia-single.glb",
+  "attribution": {
+    "author": "evolveduk (https://sketchfab.com/evolveduk)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/acacia-tree-bb14c2bb679b4d0bb1c578a27e2ddabf",
+    "title": "Acacia tree"
+  },
+  "sourceAssetMetadata": {
+    "extras": {
+      "author": "evolveduk (https://sketchfab.com/evolveduk)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/acacia-tree-bb14c2bb679b4d0bb1c578a27e2ddabf",
+      "title": "Acacia tree"
+    },
+    "generator": "Sketchfab-16.15.0",
+    "version": "2.0"
+  },
+  "changes": [
+    "Textures resized to at most 512px, preserving aspect ratio; lossless WebP encoding with unchanged material/UV mapping.",
+    "All geometry and accessor arrays copied byte-for-byte; node hierarchy, names, skins, animation keys and original metadata unchanged."
+  ],
+  "sourceSHA256": "a35d070f1c360c10bc4636d014a7bfc63bb7674b216d40516dc9a4bba908bb9b",
+  "outputSHA256": "d8a102d9158bd2c2e767b84bfb8ea52d4b8ddb56028a3b084e3ed81ec29e781d",
+  "before": {
+    "fileBytes": 7870508,
+    "triangles": 8123,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 2205448,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 725713,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 2276287,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 3,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 1055305,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 4,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 252218,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      },
+      {
+        "index": 5,
+        "name": "",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "fileBytes": 970349,
+        "decodedRGBABytes": 4194304,
+        "decodedRGBAWithMipmapsBytes": 5592404
+      }
+    ],
+    "decodedRGBABytes": 25165824,
+    "decodedRGBAWithMipmapsBytes": 33554424
+  },
+  "after": {
+    "fileBytes": 1998844,
+    "triangles": 8123,
+    "images": [
+      {
+        "index": 0,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 512,
+        "fileBytes": 402994,
+        "decodedRGBABytes": 1048576,
+        "decodedRGBAWithMipmapsBytes": 1398100
+      },
+      {
+        "index": 1,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 512,
+        "fileBytes": 187030,
+        "decodedRGBABytes": 1048576,
+        "decodedRGBAWithMipmapsBytes": 1398100
+      },
+      {
+        "index": 2,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 512,
+        "fileBytes": 597138,
+        "decodedRGBABytes": 1048576,
+        "decodedRGBAWithMipmapsBytes": 1398100
+      },
+      {
+        "index": 3,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 512,
+        "fileBytes": 121994,
+        "decodedRGBABytes": 1048576,
+        "decodedRGBAWithMipmapsBytes": 1398100
+      },
+      {
+        "index": 4,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 512,
+        "fileBytes": 69378,
+        "decodedRGBABytes": 1048576,
+        "decodedRGBAWithMipmapsBytes": 1398100
+      },
+      {
+        "index": 5,
+        "name": "",
+        "mimeType": "image/webp",
+        "width": 512,
+        "height": 512,
+        "fileBytes": 234866,
+        "decodedRGBABytes": 1048576,
+        "decodedRGBAWithMipmapsBytes": 1398100
+      }
+    ],
+    "decodedRGBABytes": 6291456,
+    "decodedRGBAWithMipmapsBytes": 8388600
+  },
+  "geometry": [],
+  "verification": {
+    "gltfLoader": "passed",
+    "imageDecode": "passed",
+    "exactNodeMetadata": true,
+    "sourceBounds": {
+      "min": [
+        -6.418279885837137,
+        -0.0001477999952182174,
+        -4.838745314208893
+      ],
+      "max": [
+        6.382795877841204,
+        6.904692838832148,
+        5.551931638599967
+      ]
+    },
+    "outputBounds": {
+      "min": [
+        -6.418279885837137,
+        -0.0001477999952182174,
+        -4.838745314208893
+      ],
+      "max": [
+        6.382795877841204,
+        6.904692838832148,
+        5.551931638599967
+      ]
+    },
+    "maxBoundsDelta": 0,
+    "sampledClips": 0,
+    "clipSamples": [],
+    "exactAccessors": 10
+  }
+}

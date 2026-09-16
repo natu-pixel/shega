@@ -1,0 +1,41 @@
+{
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "preparedCrowdAndGuests": {
+    "attributionFile": "/models/festival-people.attribution.json",
+    "description": "Original creators, source links and preparation details for the posed human profiles."
+  },
+  "sharedHumanTextures": {
+    "attributionFile": "/models/shared-people/attribution.json",
+    "description": "Unchanged hero and standard human geometry using one shared set of original hero textures."
+  },
+  "lightweightModels": {
+    "attributionFile": "/models/lite/attribution.json",
+    "description": "Original sources, authors, licences and reduction details for the default lightweight model copies."
+  },
+  "arenaFanCutouts": {
+    "attributionFile": "/models/arena-fans/atlas.json",
+    "description": "Transparent eight-view renderings of the credited human models, used for distant MMA spectators."
+  },
+  "performers": [
+    {
+      "file": "/models/guitarist.glb",
+      "title": "Animated Musical Trem Playing Guitar Loop",
+      "author": "LasquetiSpice",
+      "authorUrl": "https://sketchfab.com/LasquetiSpice",
+      "source": "https://sketchfab.com/3d-models/animated-musical-trem-playing-guitar-loop-7dde986b68834de6b5a9deff6819d3f1",
+      "license": "CC BY 4.0",
+      "changes": "Uniformly scaled, grounded from its performed pose and positioned on the Bermel stage. Source animation and textures retained."
+    },
+    {
+      "file": "/fighter.glb",
+      "title": "MMA Ground and Pound",
+      "author": "mortaleiros",
+      "authorUrl": "https://sketchfab.com/mortaleiros",
+      "source": "https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2",
+      "license": "CC BY 4.0",
+      "changes": "Optimized for the web, uniformly scaled and positioned inside the custom ETFC cage. Both original fighters are retained in a single scene instance."
+    }
+  ],
+  "environment": "The stage, instruments, cage and arena architecture are custom concept geometry, not replicas or photographs of a specific venue."
+}

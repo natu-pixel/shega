@@ -1,0 +1,11 @@
+Model Information:
+* title:	MMA Ground and Pound
+* source:	https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2
+* author:	mortaleiros (https://sketchfab.com/mortaleiros)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "MMA Ground and Pound" (https://sketchfab.com/3d-models/mma-ground-and-pound-25a4f48cc84a41078aa41109f02fe3a2) by mortaleiros (https://sketchfab.com/mortaleiros) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
