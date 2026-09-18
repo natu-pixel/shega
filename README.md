@@ -84,7 +84,7 @@ The generated shared-texture attribution report must record the input hashes, ma
 
 ## Interactive event gallery
 
-The Moments section uses a manually rotated 3D carousel of native image albums and video players, not Instagram iframes. Event filters group the selected posts by event and reset the carousel to the first post. Swipe or drag horizontally, use the previous/next controls, or focus the carousel and use arrow keys or Home/End. Only the centered card is interactive and exposed to assistive technology; neighboring cards are visual previews. The carousel does not autoplay, loads at most five nearby cover cards, and removes rotation and transitions for reduced motion. Source links remain available without JavaScript.
+The Moments section uses a manually rotated 3D carousel of native image albums and video players, not Instagram iframes. Posters are capped at 300px wide and shrink with viewport height to keep navigation within reach. Event filters group the selected posts by event and reset the carousel to the first post. Swipe or drag horizontally, use the previous/next controls, or focus the carousel and use arrow keys or Home/End. Only the centered card is interactive and exposed to assistive technology; neighboring cards are visual previews. The carousel does not autoplay, loads at most five nearby cover cards, and removes rotation and transitions for reduced motion. Source links remain available without JavaScript.
 
 Each card opens its complete ordered album and retains a canonical **Visit Instagram** link. The viewer supports previous/next buttons, thumbnails, arrow keys, Home/End, touch swipes on photos, and Escape. Native video controls keep playback opt-in; changing slides or closing the viewer stops and unloads video.
 

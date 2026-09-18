@@ -26,7 +26,7 @@ function MediaCard({ post, onOpen }: { post: InstagramGalleryPost; onOpen: (trig
             src={cover.type === "video" ? cover.poster : cover.src}
             alt={cover.alt}
             fill
-            sizes="(max-width: 600px) 76vw, 380px"
+            sizes="(max-width: 440px) 68vw, 300px"
             draggable={false}
             onError={() => setFailed(true)}
           />
