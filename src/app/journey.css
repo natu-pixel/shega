@@ -8,7 +8,7 @@
 .journey-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; }
 .journey-view { position: absolute; inset: 0; }
 .journey-canvas { display: block; width: 100%; height: 100%; }
-.journey-loading { position: absolute; inset: 42% 20px auto; text-align: center; color: #e8e3d8; font-size: 14px; }
+.journey-loading { position: absolute; z-index: 3; top: 42%; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 40px); margin: 0; padding: 12px 16px; border: 1px solid #ffffff2e; border-radius: 3px; background: #090909e6; text-align: center; color: #e8e3d8; font-size: 14px; line-height: 1.5; pointer-events: none; }
 .journey-film { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .journey-toolbar { position: absolute; z-index: 5; top: calc(var(--site-header-height) + 12px); left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 0 var(--page-gutter); pointer-events: none; }

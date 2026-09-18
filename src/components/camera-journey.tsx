@@ -112,7 +112,9 @@ export function CameraJourney() {
       <div className="journey-view">
         {journeyMedia.status === "approved"
           ? <JourneyMedia media={journeyMedia} store={store} onFailure={onFailure} />
-          : ready && sceneResident && <JourneyScene store={store} active={inView} onFailure={onFailure} />}
+          : !ready
+            ? <p className="journey-loading" role="status">Loading the 3D journey...</p>
+            : sceneResident && <JourneyScene store={store} active={inView} onFailure={onFailure} />}
       </div>
       <div className="journey-toolbar">
         <div className="journey-edition">

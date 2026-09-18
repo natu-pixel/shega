@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { Suspense, useEffect, useMemo } from "react";
 import { useSceneTexture } from "../scene-assets";
 import * as THREE from "three";
 import { random } from "../camera-path";
@@ -132,8 +132,15 @@ function Deck({ x }: { x: number }) {
   </group>;
 }
 
-export function DjStage() {
+function BermelArtwork() {
   const artwork = useSceneTexture("/images/bermel-led.png");
+  return <mesh position={[0, 4.35, 2.94]} rotation={[0, Math.PI, 0]} name="bermel-led-artwork">
+    <planeGeometry args={[6.6, 6.6 * 212 / 426]} />
+    <meshBasicMaterial map={artwork} color="#c5c5c5" toneMapped={false} />
+  </mesh>;
+}
+
+export function DjStage() {
   const visuals = useLiveVisuals();
   return <group name="bermel-dj-stage">
     <mesh position={[0, 0.4, 0]} material={black} receiveShadow castShadow><boxGeometry args={[17.6, 0.8, 7.8]} /></mesh>
@@ -160,10 +167,7 @@ export function DjStage() {
     </group>
     {/* the Bermel artwork stays as the hero center screen, in front of the columns */}
     <mesh position={[0, 4.35, 3.06]} material={black}><boxGeometry args={[6.9, 3.72, 0.2]} /></mesh>
-    <mesh position={[0, 4.35, 2.94]} rotation={[0, Math.PI, 0]} name="bermel-led-artwork">
-      <planeGeometry args={[6.6, 6.6 * 212 / 426]} />
-      <meshBasicMaterial map={artwork} color="#c5c5c5" toneMapped={false} />
-    </mesh>
+    <Suspense fallback={null}><BermelArtwork /></Suspense>
     {[-8.1, 8.1].map((x) => <group key={x}>
       <Truss position={[x, 3.9, 2.8]} length={6.7} vertical />
       <mesh position={[x, 0.9, 2.8]} material={metal}><boxGeometry args={[0.65, 0.14, 0.65]} /></mesh>

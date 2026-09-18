@@ -8,6 +8,7 @@
 
 import { Component, lazy, Suspense, useEffect, useMemo, useRef, useSyncExternalStore, type ReactNode } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useProgress } from "@react-three/drei";
 import * as THREE from "three";
 import type { JourneyStore } from "@/lib/journey";
 import { clamp01, daylightAt, nightAt, sampleCamera } from "./camera-path";
@@ -199,6 +200,13 @@ function JourneyWorlds({ store }: { store: JourneyStore }) {
   </>;
 }
 
+function SceneLoadingStatus() {
+  const loading = useProgress((state) => state.active);
+  return loading ? <p className="journey-loading" role="status">
+    Loading 3D details... You can keep exploring or choose Reading view.
+  </p> : null;
+}
+
 export function JourneyScene({ store, active, onFailure }: { store: JourneyStore; active: boolean; onFailure: (message: string) => void }) {
   const motion = useMemo(() => motionForJourney(store), [store]);
   return (
@@ -224,6 +232,7 @@ export function JourneyScene({ store, active, onFailure }: { store: JourneyStore
           <Suspense fallback={null}><ScenePostprocessing /></Suspense>
         </JourneyMotionContext.Provider>
       </Canvas>
+      <SceneLoadingStatus />
     </SceneBoundary>
   );
 }
