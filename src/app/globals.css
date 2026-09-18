@@ -181,7 +181,23 @@ section { scroll-margin-top: 24px; }
 .gallery-filters button:hover { border-color: var(--accent); }
 .gallery-filters button[aria-pressed="true"] { background: var(--accent); color: var(--ink); border-color: var(--accent); }
 .gallery-summary { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; max-width: 1100px; margin: 26px auto 16px; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: left; }
-.memory-gallery { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-bottom: 36px; max-width: 1100px; margin: 0 auto; }
+.gallery-carousel { --carousel-card-width: min(380px, 76vw); max-width: 1100px; margin: 0 auto 36px; }
+.gallery-carousel-stage { position: relative; height: calc(var(--carousel-card-width) * 1.25 + 84px); perspective: 1100px; touch-action: pan-y pinch-zoom; isolation: isolate; }
+.gallery-carousel-stage::after { content: ""; position: absolute; z-index: -1; bottom: 0; left: 10%; right: 10%; height: 90px; background: radial-gradient(ellipse, #ff8a3d20, transparent 70%); pointer-events: none; }
+.gallery-carousel-stage:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 12px; }
+.gallery-carousel-slide { position: absolute; left: 50%; top: 12px; width: var(--carousel-card-width); transform: translateX(calc(-50% + var(--slide-offset) * 74%)) translateZ(calc(var(--slide-distance) * -150px)) rotateY(calc(var(--slide-offset) * -28deg)); opacity: max(0, calc(1 - var(--slide-distance) * .3)); transition: transform .65s cubic-bezier(.22, .68, 0, 1), opacity .5s ease; }
+.gallery-carousel-slide:not(.is-current) { pointer-events: none; }
+.gallery-carousel-slide .memory-frame { box-shadow: 0 24px 54px #00000070; }
+.gallery-carousel-slide .gallery-open, .gallery-carousel-slide .gallery-unavailable { aspect-ratio: 4 / 5; }
+.gallery-carousel-controls { position: relative; display: flex; align-items: center; justify-content: center; gap: clamp(16px, 5vw, 40px); margin-top: 12px; }
+.gallery-carousel-controls .gallery-icon-button { width: 48px; height: 48px; }
+.gallery-carousel-position { width: min(230px, 48vw); }
+.gallery-carousel-position > span { font-family: var(--font-display), sans-serif; font-size: 28px; color: var(--cream); font-variant-numeric: tabular-nums; }
+.gallery-carousel-position > span > span { font-size: 14px; color: var(--muted); }
+.gallery-carousel-position p { margin-top: 5px; color: var(--cream); font-size: 12px; line-height: 1.5; }
+.gallery-carousel-hint { margin-top: 18px; font-size: 12px; line-height: 1.6; color: var(--muted); }
+.gallery-source-list { display: grid; gap: 12px; margin-top: 20px; list-style: none; }
+.gallery-source-list a { display: inline-block; padding: 12px; text-decoration: underline; }
 .memory-frame { position: relative; min-width: 0; overflow: hidden; background: #181b16; border: 1px solid var(--line); border-radius: 8px; transition: border-color .25s, transform .25s; }
 .memory-frame:hover { transform: translateY(-3px); border-color: var(--accent); }
 .memory-frame:focus-within { border-color: var(--accent); }
@@ -234,11 +250,7 @@ section { scroll-margin-top: 24px; }
 .instagram-button { position: relative; z-index: 2; min-width: 365px; gap: 15px; font-size: 11px; }
 .instagram-button > span { color: var(--accent); font-size: 10px; }
 
-@media (max-width: 1000px) {
-  .memory-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-}
 @media (max-width: 600px) {
-  .memory-gallery { grid-template-columns: minmax(0, 1fr); }
   .gallery-filters { justify-content: flex-start; gap: 8px; }
   .gallery-filters button { font-size: 11px; padding: 10px 12px; }
   .gallery-dialog { width: calc(100% - 12px); height: calc(100svh - 12px); max-height: calc(100svh - 12px); border-radius: 8px; }
@@ -475,5 +487,9 @@ body:has(.project-dialog[open]) { overflow: hidden; }
   .hero-sticky { position: relative; }
   .project-card:hover > svg { transform: none; }
   .memory-frame:hover { transform: none; }
+  .gallery-carousel-stage { perspective: none; }
+  .gallery-carousel-slide { transform: translateX(-50%); opacity: 0; }
+  .gallery-carousel-slide.is-current { opacity: 1; }
+  .gallery-open:hover > img { transform: none; }
   .spark-button::after, .scroll-line::after { display: none; }
 }

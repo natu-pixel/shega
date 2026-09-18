@@ -1,0 +1,98 @@
+{
+  "description": "Locally hosted media from the supplied public Instagram posts. Attribution does not imply a separate reuse license.",
+  "retrievedOn": "2026-09-18",
+  "processing": "Photos and source cover images encoded as WebP. Source MP4 streams preserved without re-encoding and remuxed for fast-start playback. Gallery video dimensions come from decoded streams, not Instagram cover dimensions.",
+  "sources": [
+    {
+      "id": "DYFg0Q3tdfn",
+      "url": "https://www.instagram.com/bermel_fest/reel/DYFg0Q3tdfn/",
+      "account": "bermel_fest",
+      "event": "kemn-ljemr",
+      "media": "01.mp4 and 01-poster.webp",
+      "eventEvidence": "The reel's closing title explicitly reads Bermel fest × Kemen Lejemer; it features Lij Mic."
+    },
+    {
+      "id": "DX4Aty8DMJe",
+      "url": "https://www.instagram.com/lij_mic_faf/p/DX4Aty8DMJe/",
+      "account": "lij_mic_faf",
+      "event": "kemn-ljemr",
+      "media": "01.mp4 through 07.mp4 and corresponding WebP posters",
+      "eventEvidence": "The caption credits shega_events, bermel_fest and Ghion Hotel. The media shows the same Lij Mic performance, white outfit, suspended entrance and flame-tower stage as DYFg0Q3tdfn, whose closing title identifies the event.",
+      "note": "Slides 2–7 are approximately five-second still-image MP4s in the public source carousel; their original video type is retained."
+    },
+    {
+      "id": "DT0aR7FjN3s",
+      "url": "https://www.instagram.com/shega_events/p/DT0aR7FjN3s/",
+      "account": "shega_events",
+      "event": "hello-hawassa",
+      "media": "01.webp",
+      "eventEvidence": "The Amharic caption names the Hello Hawassa concert with @yohanaoriginal in Hawassa, and the image is its promotional poster."
+    },
+    {
+      "id": "DQFAENfjbO7",
+      "url": "https://www.instagram.com/bermel_fest/reel/DQFAENfjbO7/",
+      "account": "bermel_fest",
+      "event": "bermel",
+      "media": "01.mp4 and 01-poster.webp",
+      "eventEvidence": "The caption names Bermel Fest and includes #19thedition."
+    },
+    {
+      "id": "DOGjctODR4G",
+      "url": "https://www.instagram.com/bermel_fest/p/DOGjctODR4G/",
+      "account": "bermel_fest",
+      "photographer": "zenbaba_creatives",
+      "event": "bermel",
+      "media": "01.webp through 17.webp",
+      "eventEvidence": "The caption names Bermel Fest, includes #19thedition and credits @zenbaba_creatives for the photos."
+    }
+  ],
+  "aggregation": {
+    "collectionId": "DWtn0mvEaBb",
+    "title": "Kemn Ljemr - Artist announcements",
+    "reason": "The four distinct artist announcements share the same promotional design. They are displayed as one curated collection, not four visually repetitive cards.",
+    "note": "The collection uses the first original post ID and representative source link; it is not presented as a new Instagram post. Each media item retains its own original source URL and credit.",
+    "sourcePosts": [
+      {
+        "id": "DWtn0mvEaBb",
+        "url": "https://www.instagram.com/reel/DWtn0mvEaBb/",
+        "account": "lij_mic_faf",
+        "media": ["DWtn0mvEaBb/01.mp4"]
+      },
+      {
+        "id": "DW--91rjIAV",
+        "url": "https://www.instagram.com/p/DW--91rjIAV/",
+        "account": "shega_events",
+        "media": ["DW--91rjIAV/01.mp4", "DW--91rjIAV/02.webp", "DW--91rjIAV/03.webp"]
+      },
+      {
+        "id": "DW_WyoaDEZu",
+        "url": "https://www.instagram.com/p/DW_WyoaDEZu/",
+        "account": "shega_events",
+        "media": ["DW_WyoaDEZu/01.mp4"]
+      },
+      {
+        "id": "DW_3Fy9jCyE",
+        "url": "https://www.instagram.com/p/DW_3Fy9jCyE/",
+        "account": "shega_events",
+        "media": ["DW_3Fy9jCyE/01.mp4"]
+      }
+    ],
+    "order": "Lij Mic, Melat, Addis Mulat and Betty G announcement reels, followed by the album-release poster and ticket information.",
+    "preservation": "All four distinct videos, their posters and both unique still images retain their original local asset paths."
+  },
+  "deduplication": {
+    "method": "SHA-256 equality of existing WebP files, plus visual review of poster and decoded video frames. Distinct performer reels and their original source attribution are retained within the announcements collection.",
+    "retained": [
+      {
+        "file": "DW--91rjIAV/02.webp",
+        "sha256": "b1cbab7306dacc89a06bcc8b267dbf6aaf6ce221f080a9615f428204179a052a",
+        "removedCopies": ["DW_WyoaDEZu/02.webp", "DW_3Fy9jCyE/02.webp"]
+      },
+      {
+        "file": "DW--91rjIAV/03.webp",
+        "sha256": "8c10545f4d4b2c8e853291cb3f65a4aee7ca5e0f393be69d1026cade078bcdf4",
+        "removedCopies": ["DW_WyoaDEZu/03.webp", "DW_3Fy9jCyE/03.webp"]
+      }
+    ]
+  }
+}

@@ -7,13 +7,20 @@ export const galleryEventNames: Record<GalleryEventId, string> = {
   "hello-hawassa": "Hello Hawassa",
 };
 
-type MediaDetails = { src: string; width: number; height: number; alt: string };
+type MediaDetails = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  source?: { url: string; credit: string };
+};
 export type InstagramGalleryMedia =
   | (MediaDetails & { type: "image" })
   | (MediaDetails & { type: "video"; poster: string });
 
 export type InstagramGalleryPost = {
   id: string;
+  title?: string;
   url: string;
   event: GalleryEventId;
   credit: string;

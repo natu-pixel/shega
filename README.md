@@ -84,7 +84,11 @@ The generated shared-texture attribution report must record the input hashes, ma
 
 ## Interactive event gallery
 
-The Moments section uses native image albums and video players, not Instagram iframes. Event filters group the selected posts into Bermel Fest, Kemn Ljemr - Album Release, and Hello Hawassa. Each card opens its complete ordered album and retains a canonical **Visit Instagram** link. The viewer supports previous/next buttons, thumbnails, arrow keys, Home/End, touch swipes on photos, and Escape. Native video controls keep playback opt-in; changing slides or closing the viewer stops and unloads video.
+The Moments section uses a manually rotated 3D carousel of native image albums and video players, not Instagram iframes. Event filters group the selected posts by event and reset the carousel to the first post. Swipe or drag horizontally, use the previous/next controls, or focus the carousel and use arrow keys or Home/End. Only the centered card is interactive and exposed to assistive technology; neighboring cards are visual previews. The carousel does not autoplay, loads at most five nearby cover cards, and removes rotation and transitions for reduced motion. Source links remain available without JavaScript.
+
+Each card opens its complete ordered album and retains a canonical **Visit Instagram** link. The viewer supports previous/next buttons, thumbnails, arrow keys, Home/End, touch swipes on photos, and Escape. Native video controls keep playback opt-in; changing slides or closing the viewer stops and unloads video.
+
+The similar Kemn Ljemr artist announcements are combined into one clearly titled collection, alongside separate concert footage. Repeated still images appear only once; distinct artist videos are retained. Combined media carries its original source URL and publisher credit, and the viewer's Instagram link follows the currently selected photo or video rather than attributing the whole collection to one post.
 
 This is a curated local snapshot, not an automatically updating Instagram feed:
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type PointerEvent } from "react";
 import Image from "next/image";
 import { instagramGalleryPosts } from "@/lib/instagram-gallery-media";
 import {
@@ -16,7 +16,7 @@ function PlayIcon() {
 function MediaCard({ post, onOpen }: { post: InstagramGalleryPost; onOpen: (trigger: HTMLButtonElement) => void }) {
   const [failed, setFailed] = useState(false);
   const cover = post.media[0];
-  const name = galleryEventNames[post.event];
+  const name = post.title ?? galleryEventNames[post.event];
 
   return (
     <article className="memory-frame" data-post-id={post.id}>
@@ -26,7 +26,8 @@ function MediaCard({ post, onOpen }: { post: InstagramGalleryPost; onOpen: (trig
             src={cover.type === "video" ? cover.poster : cover.src}
             alt={cover.alt}
             fill
-            sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"
+            sizes="(max-width: 600px) 76vw, 380px"
+            draggable={false}
             onError={() => setFailed(true)}
           />
         ) : <span className="gallery-media-error">Preview unavailable. Visit Instagram below.</span>}
@@ -77,7 +78,8 @@ function GalleryViewer({ post, onClose }: { post: InstagramGalleryPost; onClose:
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [index, setIndex] = useState(0);
   const media = post.media[index];
-  const name = galleryEventNames[post.event];
+  const name = post.title ?? galleryEventNames[post.event];
+  const source = media?.source ?? { url: post.url, credit: post.credit };
 
   useEffect(() => {
     const node = dialog.current;
@@ -193,13 +195,120 @@ function GalleryViewer({ post, onClose }: { post: InstagramGalleryPost; onClose:
         <footer className="gallery-viewer-footer">
           <div>
             <p id="gallery-viewer-position" aria-live="polite" aria-atomic="true">{media?.type === "video" ? "Video" : "Photo"} {index + 1} / {post.media.length}</p>
-            <p className="gallery-credit">Original post: @{post.credit}</p>
+            <p className="gallery-credit">Original post: @{source.credit}</p>
           </div>
-          <a href={post.url} className="gallery-visit" target="_blank" rel="noopener noreferrer"><InstagramIcon /> Visit Instagram <ArrowIcon diagonal /></a>
+          <a href={source.url} className="gallery-visit" target="_blank" rel="noopener noreferrer"><InstagramIcon /> Visit Instagram <ArrowIcon diagonal /></a>
         </footer>
       </div>
     </dialog>
   );
+}
+
+function PostCarousel({ posts, onOpen }: {
+  posts: readonly InstagramGalleryPost[];
+  onOpen: (post: InstagramGalleryPost, trigger: HTMLButtonElement) => void;
+}) {
+  const [index, setIndex] = useState(0);
+  const stage = useRef<HTMLDivElement>(null);
+  const gesture = useRef<{ id: number; x: number; y: number } | null>(null);
+  const suppressClick = useRef(false);
+  const current = posts[index];
+
+  function select(next: number) {
+    if (!posts.length) return;
+    if (stage.current?.contains(document.activeElement)) stage.current.focus({ preventScroll: true });
+    setIndex((next + posts.length) % posts.length);
+  }
+
+  function handleKey(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    const next = event.key === "ArrowLeft" ? index - 1 : event.key === "ArrowRight" ? index + 1
+      : event.key === "Home" ? 0 : event.key === "End" ? posts.length - 1 : null;
+    if (next !== null) {
+      event.preventDefault();
+      select(next);
+    }
+  }
+
+  function finishSwipe(event: PointerEvent<HTMLDivElement>) {
+    const start = gesture.current;
+    gesture.current = null;
+    if (!start || start.id !== event.pointerId) return;
+    const x = event.clientX - start.x;
+    const y = event.clientY - start.y;
+    if (Math.abs(x) > 50 && Math.abs(x) > Math.abs(y) * 1.5) {
+      suppressClick.current = true;
+      select(index + (x < 0 ? 1 : -1));
+    }
+  }
+
+  return <div className="gallery-carousel" id="event-gallery" role="region" aria-roledescription="carousel" aria-label="Event collections">
+    <p className="visually-hidden" id="gallery-carousel-help">Use the previous and next buttons, swipe, or press Left and Right arrow keys to rotate through collections. Press Home or End to jump to the first or last collection. Open the centered card to explore its album.</p>
+    <div
+      ref={stage}
+      className="gallery-carousel-stage"
+      tabIndex={0}
+      aria-label="Browse event collections"
+      aria-describedby="gallery-carousel-help"
+      onKeyDown={handleKey}
+      onPointerDown={(event) => {
+        suppressClick.current = false;
+        gesture.current = event.isPrimary && event.button === 0
+          ? { id: event.pointerId, x: event.clientX, y: event.clientY } : null;
+      }}
+      onPointerMove={(event) => {
+        const start = gesture.current;
+        if (!start || start.id !== event.pointerId) return;
+        const x = Math.abs(event.clientX - start.x);
+        const y = Math.abs(event.clientY - start.y);
+        if (x > 12 && x > y * 1.5) event.currentTarget.setPointerCapture(event.pointerId);
+      }}
+      onPointerUp={finishSwipe}
+      onPointerCancel={() => { gesture.current = null; }}
+      onClickCapture={(event) => {
+        if (suppressClick.current && event.detail !== 0) {
+          event.preventDefault();
+          event.stopPropagation();
+          suppressClick.current = false;
+        }
+      }}
+    >
+      {posts.map((post, postIndex) => {
+        let offset = postIndex - index;
+        if (offset > posts.length / 2) offset -= posts.length;
+        if (offset < -posts.length / 2) offset += posts.length;
+        const distance = Math.abs(offset);
+        const active = offset === 0;
+        return <div
+          key={post.id}
+          className={`gallery-carousel-slide${active ? " is-current" : ""}`}
+          style={{ "--slide-offset": offset, "--slide-distance": distance, zIndex: posts.length - distance } as CSSProperties}
+          data-offset={offset}
+          aria-hidden={!active}
+          inert={!active}
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`${postIndex + 1} of ${posts.length}: ${post.title ?? galleryEventNames[post.event]}`}
+        >
+          {distance <= 2 && <MediaCard post={post} onOpen={(button) => onOpen(post, button)} />}
+        </div>;
+      })}
+    </div>
+    <div className="gallery-carousel-controls">
+      <button className="gallery-icon-button gallery-previous" type="button" aria-label="Previous collection" aria-controls="event-gallery" disabled={posts.length < 2} onClick={() => select(index - 1)}><ArrowIcon /></button>
+      <div className="gallery-carousel-position" aria-live="polite" aria-atomic="true">
+        <span>{String(index + 1).padStart(2, "0")} <span>/ {String(posts.length).padStart(2, "0")}</span></span>
+        <p>{current ? current.title ?? galleryEventNames[current.event] : "No collections available"}</p>
+      </div>
+      <button className="gallery-icon-button" type="button" aria-label="Next collection" aria-controls="event-gallery" disabled={posts.length < 2} onClick={() => select(index + 1)}><ArrowIcon /></button>
+    </div>
+    <p className="gallery-carousel-hint">Swipe or use the arrows. Open a post to step inside.</p>
+    <noscript><ul className="gallery-source-list">{posts.flatMap((post) => {
+      const sources = new Map([[post.url, post.credit]]);
+      post.media.forEach((item) => { if (item.source) sources.set(item.source.url, item.source.credit); });
+      return [...sources].map(([url, credit]) => <li key={`${post.id}-${url}`}><a href={url} target="_blank" rel="noopener noreferrer">{post.title ?? galleryEventNames[post.event]} / @{credit} / Visit Instagram</a></li>);
+    })}</ul></noscript>
+  </div>;
 }
 
 export function InstagramMoments() {
@@ -225,12 +334,10 @@ export function InstagramMoments() {
         ))}
       </div>
       <div className="gallery-summary">
-        <p aria-live="polite" aria-atomic="true">{posts.length} {posts.length === 1 ? "post" : "posts"} / {filter === "all" ? "All events" : galleryEventNames[filter]}{unavailableCount > 0 && ` / ${unavailableCount} unavailable`}</p>
-        <p>Open an album. Explore every moment.</p>
+        <p aria-live="polite" aria-atomic="true">{posts.length} {posts.length === 1 ? "collection" : "collections"} / {filter === "all" ? "All events" : galleryEventNames[filter]}{unavailableCount > 0 && ` / ${unavailableCount} unavailable`}</p>
+        <p>A different angle. A new memory.</p>
       </div>
-      <div className="memory-gallery" id="event-gallery">
-        {posts.map((post) => <MediaCard key={post.id} post={post} onOpen={(button) => { trigger.current = button; setSelected(post); }} />)}
-      </div>
+      <PostCarousel key={filter} posts={posts} onOpen={(post, button) => { trigger.current = button; setSelected(post); }} />
       {selected && <GalleryViewer key={selected.id} post={selected} onClose={closeGallery} />}
     </>
   );
