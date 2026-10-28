@@ -6,7 +6,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ key
     if (!env.MEDIA) return new Response("Media storage is not configured.", { status: 404 });
     const { key: parts } = await params;
     const key = parts.join("/");
-    if (!key.startsWith("events/") || key.includes("..")) return new Response("Not found.", { status: 404 });
+    if ((!key.startsWith("events/") && !key.startsWith("blog/")) || key.includes("..")) return new Response("Not found.", { status: 404 });
     const object = await env.MEDIA.get(key);
     if (!object) return new Response("Not found.", { status: 404 });
     const headers = new Headers();

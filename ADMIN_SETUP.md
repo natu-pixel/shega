@@ -47,3 +47,9 @@ After configuring the bindings and secrets, rebuild and deploy the Worker. The p
 Set `NEXT_PUBLIC_SITE_URL` to the canonical public HTTPS domain in the deployment environment before building. The metadata, canonical links, structured data, and sitemap use this value. For local development, set it in `.dev.vars` to the local public URL you use.
 
 Before publishing the legal pages, confirm Shega Events' registered legal name and any company or privacy contact details that should appear publicly. The website currently uses `info@shega.events` as its public inquiry and privacy contact. Confirm that mailbox is monitored. Keep the service descriptions, event dates, partner marks, audience figures, and photography permissions accurate as content is added.
+
+## GitHub push deployments
+
+The repository workflow at `.github/workflows/deploy.yml` builds and deploys the Worker whenever code is pushed to `main`. In GitHub, open **Settings > Secrets and variables > Actions** and add a repository secret named `CLOUDFLARE_API_TOKEN` using a Cloudflare API token with permission to edit Workers on this account. The workflow reads the account ID from the existing deployment configuration. Never commit the token. Add `NEXT_PUBLIC_SITE_URL` as a GitHub Actions variable when the canonical domain is ready; the build uses it for canonical metadata and the sitemap. Publishing a blog post or uploading photos in `/admin/blog` saves directly to D1/R2 and does not require a GitHub push or redeployment.
+
+Blog post text, photo references, and YouTube links are stored in D1 in the `site_posts.data` JSON field. Uploaded image files are stored in the R2 media bucket under `blog/`; event uploads use `events/`. In local development, blog drafts and image previews are kept in this browser's local storage rather than D1/R2. Production photo uploads support JPG, PNG, WebP, and GIF up to 12 MB each. YouTube video and Shorts links are embedded on the published post page.

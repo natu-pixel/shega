@@ -10,10 +10,12 @@ export async function POST(request: Request) {
     if (!env.MEDIA) return Response.json({ error: "The MEDIA R2 binding is not configured." }, { status: 503 });
     const form = await request.formData();
     const file = form.get("file");
+    const folder = form.get("folder");
+    if (folder !== "events" && folder !== "blog") return Response.json({ error: "Choose a valid media folder." }, { status: 400 });
     if (!(file instanceof File) || !extensions[file.type] || file.size < 1 || file.size > 12 * 1024 * 1024) {
       return Response.json({ error: "Choose a JPG, PNG, WebP or GIF image up to 12 MB." }, { status: 400 });
     }
-    const key = `events/${crypto.randomUUID()}.${extensions[file.type]}`;
+    const key = `${folder}/${crypto.randomUUID()}.${extensions[file.type]}`;
     await env.MEDIA.put(key, file.stream(), { httpMetadata: { contentType: file.type, cacheControl: "public, max-age=31536000, immutable" } });
     return Response.json({ url: `/media/${key}` });
   } catch {

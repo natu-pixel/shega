@@ -1,0 +1,52 @@
+name: Deploy Shega Events to Cloudflare
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shega-events-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Check Cloudflare deploy credential
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: test -n "$CLOUDFLARE_API_TOKEN" || { echo "Add CLOUDFLARE_API_TOKEN as a GitHub Actions repository secret."; exit 1; }
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set canonical site URL when configured
+        if: ${{ vars.NEXT_PUBLIC_SITE_URL != '' }}
+        env:
+          SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+        run: echo "NEXT_PUBLIC_SITE_URL=$SITE_URL" >> "$GITHUB_ENV"
+
+      - name: Build Cloudflare Worker
+        run: npm run build
+
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 650ca8cde8dff7e84cacaaeb07464446
+          command: deploy

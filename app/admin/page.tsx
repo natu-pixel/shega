@@ -112,7 +112,7 @@ export default function AdminPage() {
           setEvent((current) => ({ ...current, image: gallery && current.image ? current.image : dataUrl, gallery: [...current.gallery, dataUrl] }));
           continue;
         }
-        const data = new FormData(); data.set("file", file);
+        const data = new FormData(); data.set("file", file); data.set("folder", "events");
         const response = await fetch("/api/admin/upload", { method: "POST", body: data });
         if (!response.ok) throw new Error(await responseError(response));
         const result = await response.json() as { url: string };
