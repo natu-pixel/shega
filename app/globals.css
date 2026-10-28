@@ -501,6 +501,33 @@ button { border: 0; }
   line-height: 1.6;
 }
 
+.international-artists-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 480px;
+  margin-top: 24px;
+}
+
+.international-artists-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #201710;
+}
+
+.upcoming-countdown-empty > div {
+  width: min(100% - 48px, 1100px);
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 100px) 0;
+}
+
+.upcoming-countdown-empty h2 { margin: 18px 0 8px; font-size: clamp(28px, 5vw, 58px); letter-spacing: -.04em; }
+.upcoming-countdown-empty p { color: #a3a3a3; font-size: 13px; }
+.upcoming-countdown-empty a { display: inline-block; margin-top: 14px; color: var(--orange); font-size: 12px; font-weight: 700; }
+
 .shega-contact-info-list {
   max-width: 440px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);

@@ -69,7 +69,7 @@ export default function TermsPage() {
               <h2>Contact us</h2>
               <p>
                 If you have questions about these Terms of Service, please contact us at
-                <a href="mailto:legal@shega.events">legal@shega.events</a> or through our Instagram at
+                <a href="mailto:info@shega.events">info@shega.events</a> or through our Instagram at
                 <a href="https://www.instagram.com/shega_events/">@shega_events</a>.
               </p>
             </section>

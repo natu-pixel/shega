@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { ScrollStory } from "@/components/scroll-story";
 import { Brand } from "@/components/brand";
 import Navbar from "@/components/Navbar";
-import { CONTACT_CHANNELS, SITE_NAME } from "@/lib/site";
+import { CONTACT_CHANNELS, CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 import { UpcomingEventCountdown } from "@/components/upcoming-event-countdown";
 import { FeaturedEvents } from "@/components/featured-events";
 import { BlogPreview } from "@/components/blog-preview";
@@ -157,22 +157,29 @@ export default function ShegaLandingPage() {
                   From Addis Ababa to the world &mdash; we bring artists, DJs and performers
                   together for moments that stay with the audience long after the lights go up.
                 </p>
+                <div className="international-artists-gallery" aria-label="International artists and live performances">
+                  {[
+                    ["photo_2026-10-28_20-28-13.jpg", "International artist performance"],
+                    ["photo_2026-10-28_20-28-16.jpg", "Live artist performance"],
+                    ["photo_2026-10-28_20-28-18.jpg", "Artist on stage"],
+                    ["photo_2026-10-28_20-28-22.jpg", "Live music performance"],
+                    ["photo_2026-10-28_20-28-25.jpg", "Artist and audience"],
+                    ["photo_2026-10-28_20-28-28.jpg", "International live experience"],
+                  ].map(([src, alt]) => (
+                    <img key={src} src={`/international%20artists/${src}`} alt={alt} loading="lazy" />
+                  ))}
+                </div>
               </div>
 
               <div className="shega-contact-info-list">
-                <div className="shega-contact-info-row">
-                  <span className="shega-contact-label">Featured</span>
-                  <a href="https://www.instagram.com/shega_events/" target="_blank" rel="noopener noreferrer" className="shega-contact-link">
-                    @shega_events
-                  </a>
-                </div>
-
-                <div className="shega-contact-info-row">
-                  <span className="shega-contact-label">Reach</span>
-                  <a href="mailto:info@shega.events" target="_blank" rel="noopener noreferrer" className="shega-contact-link">
-                    info@shega.events
-                  </a>
-                </div>
+                {CONTACT_CHANNELS.map((channel) => (
+                  <div className="shega-contact-info-row" key={channel.label}>
+                    <span className="shega-contact-label">{channel.label}</span>
+                    <a href={channel.href} target={channel.href.startsWith("http") ? "_blank" : undefined} rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined} className="shega-contact-link">
+                      {channel.value}
+                    </a>
+                  </div>
+                ))}
 
                 <p className="shega-contact-footnote">
                   BASED IN ADDIS ABABA &middot; PRODUCING ACROSS ETHIOPIA &amp; BEYOND
@@ -181,40 +188,48 @@ export default function ShegaLandingPage() {
             </div>
 
             <div className="shega-form-card">
-              <h3 className="shega-form-heading">INVITE AN ARTIST</h3>
+              <h3 className="shega-form-heading">PLAN AN EXPERIENCE</h3>
               <p className="shega-contact-subtext">
-                Tell us about the artist you want to feature and we will get in touch.
+                Tell us what you are planning. We will get back to you by email.
               </p>
               <form
                 className="shega-inquiry-form"
                 onSubmit={(event) => {
                   event.preventDefault();
                   const values = new FormData(event.currentTarget);
-                  const subject = `Artist inquiry: ${values.get("artistName")}`;
+                  const inquiryType = String(values.get("inquiryType") || "Event");
+                  const subject = `${inquiryType} inquiry: ${values.get("project") || "New project"}`;
                   const body = [
-                    `Artist: ${values.get("artistName")}`,
-                    `Genre: ${values.get("genre") || "Not set"}`,
+                    `Inquiry type: ${inquiryType}`,
+                    `Event or artist: ${values.get("project") || "Not provided"}`,
+                    `Event type: ${values.get("eventType") || "Not provided"}`,
+                    `Preferred date: ${values.get("date") || "Not provided"}`,
+                    `Location: ${values.get("location") || "Not provided"}`,
+                    `Estimated audience: ${values.get("audience") || "Not provided"}`,
+                    `Budget range: ${values.get("budget") || "Not provided"}`,
+                    `Name: ${values.get("name")}`,
                     `Email: ${values.get("email")}`,
-                    `Label / management: ${values.get("label") || "Not set"}`,
                     "",
                     String(values.get("brief") || ""),
-                  ].join("\\n");
-                  window.location.href = `mailto:info@shega.events?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                  ].join("\n");
+                  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 }}
               >
                 <div className="shega-form-fields">
-                  <label>Artist name<input name="artistName" autoComplete="name" placeholder="e.g. Kali" required /></label>
+                  <label>What are you planning?<select name="inquiryType" defaultValue="Event"><option>Event</option><option>Artist booking</option><option>Brand activation</option><option>Private event</option></select></label>
+                  <label>Your name<input name="name" autoComplete="name" placeholder="Full name" required /></label>
                   <label>Email<input name="email" type="email" autoComplete="email" placeholder="you@example.com" required /></label>
-                  <label>Genre<select name="genre" defaultValue="" required>
-                    <option value="" disabled>Select a genre</option>
-                    <option>Electronic</option><option>House</option><option>Techno</option><option>Jazz</option><option>Hip Hop</option><option>Live Band</option><option>Other</option>
-                  </select></label>
-                  <label>Label or management<input name="label" placeholder="Optional" /></label>
-                  <label className="shega-form-wide">Tell us a little more<textarea name="brief" rows={3} placeholder="Style, hometown, links, or anything we should know" required /></label>
+                  <label>Event or artist name<input name="project" placeholder="If known" /></label>
+                  <label>Event type<input name="eventType" placeholder="Concert, festival, launch..." /></label>
+                  <label>Preferred date<input name="date" type="date" /></label>
+                  <label>Location<input name="location" placeholder="City or venue" /></label>
+                  <label>Estimated audience<input name="audience" inputMode="numeric" placeholder="Approximate number" /></label>
+                  <label>Budget range<input name="budget" placeholder="Optional" /></label>
+                  <label className="shega-form-wide">Project details<textarea name="brief" rows={3} placeholder="Goals, requirements, links, or anything we should know" required /></label>
                 </div>
                 <div className="shega-form-actions">
-                  <button className="shega-submit-pill" type="submit">Send artist brief <span aria-hidden="true">↗</span></button>
-                  <span className="shega-form-note">Opens your email app to send to info@shega.events</span>
+                  <button className="shega-submit-pill" type="submit">Prepare inquiry email <span aria-hidden="true">↗</span></button>
+                  <span className="shega-form-note">Opens your email app. Review and send your message to {CONTACT_EMAIL}.</span>
                 </div>
               </form>
             </div>

@@ -12,6 +12,7 @@ export const SITE_DESCRIPTION =
 
 export const INSTAGRAM_HANDLE = "@shega_events";
 export const INSTAGRAM_URL = "https://www.instagram.com/shega_events/";
+export const CONTACT_EMAIL = "info@shega.events";
 
 export const OG_IMAGE = {
   url: "/events/rophnan-finale.jpg",
@@ -20,8 +21,8 @@ export const OG_IMAGE = {
   alt: "Rophnan concert audience and stage, produced by Shega Events",
 };
 
-// Outbound contact routes, in display order. Add the email and phone rows here
-// once they exist — the contact block and the JSON-LD graph both read this list.
+// Keep verified public contact routes here so the homepage and structured data agree.
 export const CONTACT_CHANNELS: readonly { label: string; value: string; href: string }[] = [
   { label: "INSTAGRAM / DM", value: INSTAGRAM_HANDLE, href: INSTAGRAM_URL },
+  { label: "EMAIL", value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
 ];

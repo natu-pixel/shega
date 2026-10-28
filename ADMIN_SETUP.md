@@ -41,3 +41,9 @@ Use a unique admin username and password, and a separate random session secret o
 For local development, add the same binding entries to the local Wrangler config and place `NEXTJS_ENV=development`, `ADMIN_USERNAME=...`, `ADMIN_PASSWORD=...`, and `SESSION_SECRET=...` in the ignored `.dev.vars` file. Local D1 migrations can be applied with `npx wrangler d1 migrations apply shega-events-content --local`.
 
 After configuring the bindings and secrets, rebuild and deploy the Worker. The panel supports current, upcoming, and past event status; publishing and drafts; event descriptions and links; cover image and multi-image galleries; and deleting events. Uploaded image types are JPG, PNG, WebP, and GIF, up to 12 MB each.
+
+## Website launch settings
+
+Set `NEXT_PUBLIC_SITE_URL` to the canonical public HTTPS domain in the deployment environment before building. The metadata, canonical links, structured data, and sitemap use this value. For local development, set it in `.dev.vars` to the local public URL you use.
+
+Before publishing the legal pages, confirm Shega Events' registered legal name and any company or privacy contact details that should appear publicly. The website currently uses `info@shega.events` as its public inquiry and privacy contact. Confirm that mailbox is monitored. Keep the service descriptions, event dates, partner marks, audience figures, and photography permissions accurate as content is added.

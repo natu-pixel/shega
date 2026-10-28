@@ -21,7 +21,7 @@ export const FEATURED_EVENTS = [
     description:
       "A look inside ETFC through the crowd, the setting, and the moments captured by Shega Events.",
     image: "/events/etfc.png",
-    gallery: ["/events/etfc.png", "/events/etfc.png", "/events/etfc.png", "/events/etfc.png"],
+    gallery: ["/events/etfc.png"],
     instagramUrl: "https://www.instagram.com/reel/DdgDHmgMLJf/",
   },
   {

@@ -28,9 +28,8 @@ export default function PrivacyPage() {
             <section id="who-we-are" className="shega-legal-block">
               <h2>Who we are</h2>
               <p>
-                Shega Events operates this website. The company’s registered legal name, physical
-                address, registration details, and designated privacy contact have not yet been
-                supplied for publication. For privacy requests, contact <a href="mailto:info@shega.events">info@shega.events</a>.
+                Shega Events operates this website from Addis Ababa, Ethiopia. For privacy requests,
+                contact <a href="mailto:info@shega.events">info@shega.events</a>.
               </p>
             </section>
             <section id="information-we-handle" className="shega-legal-block">

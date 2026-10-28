@@ -47,7 +47,19 @@ export function UpcomingEventCountdown() {
     return () => window.clearInterval(timer);
   }, [event]);
 
-  if (!event || now === null) return null;
+  if (now === null) return null;
+  if (!event) {
+    return (
+      <section id="upcoming" className="upcoming-countdown-section upcoming-countdown-empty" aria-label="Upcoming events">
+        <div>
+          <span className="upcoming-countdown-kicker"><i /> WHAT'S NEXT</span>
+          <h2>New experiences are on the way.</h2>
+          <p>Follow Shega Events for announcements and upcoming dates.</p>
+          <a href="https://www.instagram.com/shega_events/" target="_blank" rel="noopener noreferrer">Follow @shega_events <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    );
+  }
   const countdown = getCountdown(event.date, now);
   if (!countdown) return null;
 
