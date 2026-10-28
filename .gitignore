@@ -19,6 +19,12 @@ video/
 scripts/
 public/changer/
 
+# Local/source copies that are not part of the deployed site
+event-photos/
+pic.jfif
+public/asset-manifest.json
+CLAUDE.md
+
 # Video files (never commit videos)
 *.mov
 *.mp4
