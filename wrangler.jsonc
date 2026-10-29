@@ -18,7 +18,7 @@
 		{
 			"binding": "CONTENT_DB",
 			"database_name": "shega-events-content",
-			"database_id": "68f8779a-ed79-491d-ac59-fbf38b928ff1",
+			"database_id": "15a2e1c5-264c-4f54-957e-6bcea8422fb2",
 			"migrations_dir": "migrations"
 		}
 	],
