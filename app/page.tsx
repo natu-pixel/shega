@@ -139,6 +139,19 @@ export default function ShegaLandingPage() {
             <h2 className="shega-section-title-lg">INTERNATIONAL<br />ARTISTS</h2>
           </div>
 
+          <div className="international-artists-gallery" aria-label="International artists and live performances">
+            {[
+              ["photo_2026-10-28_20-28-13.jpg", "International artist performance"],
+              ["photo_2026-10-28_20-28-16.jpg", "Live artist performance"],
+              ["photo_2026-10-28_20-28-18.jpg", "Artist on stage"],
+              ["photo_2026-10-28_20-28-22.jpg", "Live music performance"],
+              ["photo_2026-10-28_20-28-25.jpg", "Artist and audience"],
+              ["photo_2026-10-28_20-28-28.jpg", "International live experience"],
+            ].map(([src, alt]) => (
+              <img key={src} src={`/international%20artists/${src}`} alt={alt} loading="lazy" />
+            ))}
+          </div>
+
           <div className="shega-divider-stage">
             <div className="shega-vertical-line" />
           </div>
@@ -157,18 +170,6 @@ export default function ShegaLandingPage() {
                   From Addis Ababa to the world &mdash; we bring artists, DJs and performers
                   together for moments that stay with the audience long after the lights go up.
                 </p>
-                <div className="international-artists-gallery" aria-label="International artists and live performances">
-                  {[
-                    ["photo_2026-10-28_20-28-13.jpg", "International artist performance"],
-                    ["photo_2026-10-28_20-28-16.jpg", "Live artist performance"],
-                    ["photo_2026-10-28_20-28-18.jpg", "Artist on stage"],
-                    ["photo_2026-10-28_20-28-22.jpg", "Live music performance"],
-                    ["photo_2026-10-28_20-28-25.jpg", "Artist and audience"],
-                    ["photo_2026-10-28_20-28-28.jpg", "International live experience"],
-                  ].map(([src, alt]) => (
-                    <img key={src} src={`/international%20artists/${src}`} alt={alt} loading="lazy" />
-                  ))}
-                </div>
               </div>
 
               <div className="shega-contact-info-list">

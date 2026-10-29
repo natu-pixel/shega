@@ -505,7 +505,7 @@ button { border: 0; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
-  max-width: 480px;
+  max-width: 960px;
   margin-top: 24px;
 }
 
