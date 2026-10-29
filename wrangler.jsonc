@@ -13,7 +13,7 @@
 	"observability": {
 		"enabled": true
 	},
-	"account_id": "650ca8cde8dff7e84cacaaeb07464446",
+	"account_id": "eb52ca1df76d657794f3779458cba062",
 	"d1_databases": [
 		{
 			"binding": "CONTENT_DB",
