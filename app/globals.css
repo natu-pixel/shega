@@ -434,6 +434,7 @@ button { border: 0; }
 }
 
 .shega-switcher-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 24px; }
+.international-artists-heading-note { margin: 0; color: rgba(255,255,255,.58); font-size: 9px; font-weight: 700; letter-spacing: .16em; line-height: 1.8; text-align: right; }
 .shega-tab-btn { background: none; border: none; color: #fff; padding: 0; text-align: left; cursor: pointer; opacity: .45; transition: opacity .2s ease; }
 .shega-tab-btn.is-active, .shega-tab-btn:hover { opacity: 1; }
 .shega-switcher-or { font-size: clamp(18px, 2vw, 24px); font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
@@ -503,19 +504,38 @@ button { border: 0; }
 
 .international-artists-gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  max-width: 960px;
-  margin-top: 24px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(2, clamp(130px, 17vw, 250px));
+  gap: 10px;
+  width: 100%;
+  max-width: 1280px;
+  margin: clamp(26px, 4vw, 54px) auto clamp(46px, 7vw, 88px);
 }
 
-.international-artists-gallery img {
+.international-artists-image {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 4px;
   background: #201710;
+  transition: transform .45s ease, filter .45s ease;
+}
+
+.international-artists-image:hover {
+  transform: scale(1.025);
+  filter: saturate(1.1);
+}
+
+.international-artists-image-1 { grid-column: span 3; grid-row: span 2; }
+.international-artists-image-6 { grid-column: span 2; }
+
+@media (max-width: 760px) {
+  .international-artists-heading-note { text-align: left; }
+  .international-artists-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; gap: 7px; margin: 26px auto 48px; }
+  .international-artists-image { aspect-ratio: 4 / 3; height: auto; }
+  .international-artists-image-1 { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 10; }
+  .international-artists-image-6 { grid-column: auto; }
 }
 
 .upcoming-countdown-empty > div {

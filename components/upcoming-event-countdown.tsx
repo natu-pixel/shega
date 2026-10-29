@@ -21,6 +21,7 @@ function getCountdown(date: string, now: number): Countdown | null {
 
 function dateLabel(date: string) {
   const parsed = new Date(`${date}T00:00:00`);
+  if (!Number.isFinite(parsed.getTime())) return date;
   return new Intl.DateTimeFormat(undefined, { day: "numeric", month: "long", year: "numeric" }).format(parsed);
 }
 
@@ -34,9 +35,12 @@ export function UpcomingEventCountdown() {
       ? Promise.resolve(preview.filter((item) => item.published))
       : fetch("/api/events", { cache: "no-store" }).then((response) => response.ok ? response.json() as Promise<ManagedEvent[]> : []);
     load.then((events) => {
+      const current = events.filter((item) => item.status === "current" && item.published && /^\d{4}-\d{2}-\d{2}$/.test(item.date))
+        .sort((a, b) => b.date.localeCompare(a.date))[0];
       const next = events.filter((item) => item.status === "upcoming" && item.published && /^\d{4}-\d{2}-\d{2}$/.test(item.date))
         .sort((a, b) => a.date.localeCompare(b.date))[0];
-      if (next) setEvent(next);
+      const featured = current ?? next;
+      if (featured) setEvent(featured);
     }).catch(() => undefined);
     setNow(Date.now());
   }, []);
@@ -61,23 +65,25 @@ export function UpcomingEventCountdown() {
     );
   }
   const countdown = getCountdown(event.date, now);
-  if (!countdown) return null;
+  if (!countdown && event.status !== "current") return null;
 
   return (
-    <section id="upcoming" className="upcoming-countdown-section" aria-label="Upcoming event countdown">
+    <section id="upcoming" className="upcoming-countdown-section" aria-label={event.status === "current" ? "Current featured event" : "Upcoming event countdown"}>
       <div className="upcoming-countdown-card" style={{ backgroundImage: `linear-gradient(90deg, rgba(4, 8, 8, .9) 0%, rgba(4, 8, 8, .72) 48%, rgba(4, 8, 8, .38) 100%), url("${event.image}")` }}>
         <div className="upcoming-countdown-copy">
-          <span className="upcoming-countdown-kicker"><i /> COMING UP NEXT</span>
+          <span className="upcoming-countdown-kicker"><i /> {event.status === "current" ? "CURRENTLY FEATURED" : "COMING UP NEXT"}</span>
           <h2>{event.title}</h2>
           <p>{[event.detail, event.location].filter(Boolean).join(" · ")}</p>
           <time dateTime={event.date}>{dateLabel(event.date)}</time>
           <a href={`/events/${event.slug}`}>Event details <span aria-hidden="true">↗</span></a>
         </div>
-        <div className="upcoming-countdown-clock" aria-label={`${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes until ${event.title}`}>
-          {([ ["Days", countdown.days], ["Hours", countdown.hours], ["Minutes", countdown.minutes], ["Seconds", countdown.seconds] ] as const).map(([label, value]) => (
-            <div className="upcoming-countdown-unit" key={label}><strong>{String(value).padStart(2, "0")}</strong><span>{label}</span></div>
-          ))}
-        </div>
+        {event.status === "upcoming" && countdown && (
+          <div className="upcoming-countdown-clock" aria-label={`${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes until ${event.title}`}>
+            {([ ["Days", countdown.days], ["Hours", countdown.hours], ["Minutes", countdown.minutes], ["Seconds", countdown.seconds] ] as const).map(([label, value]) => (
+              <div className="upcoming-countdown-unit" key={label}><strong>{String(value).padStart(2, "0")}</strong><span>{label}</span></div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -137,6 +137,7 @@ export default function ShegaLandingPage() {
         <div className="shega-container">
           <div className="shega-switcher-header">
             <h2 className="shega-section-title-lg">INTERNATIONAL<br />ARTISTS</h2>
+            <p className="international-artists-heading-note">CURATED LIVE EXPERIENCES<br />FROM ADDIS ABABA &amp; BEYOND</p>
           </div>
 
           <div className="international-artists-gallery" aria-label="International artists and live performances">
@@ -147,13 +148,9 @@ export default function ShegaLandingPage() {
               ["photo_2026-10-28_20-28-22.jpg", "Live music performance"],
               ["photo_2026-10-28_20-28-25.jpg", "Artist and audience"],
               ["photo_2026-10-28_20-28-28.jpg", "International live experience"],
-            ].map(([src, alt]) => (
-              <img key={src} src={`/international%20artists/${src}`} alt={alt} loading="lazy" />
+            ].map(([src, alt], index) => (
+              <img key={src} className={`international-artists-image international-artists-image-${index + 1}`} src={`/international%20artists/${src}`} alt={alt} loading="lazy" decoding="async" />
             ))}
-          </div>
-
-          <div className="shega-divider-stage">
-            <div className="shega-vertical-line" />
           </div>
 
           <div className="shega-contact-grid">
@@ -164,11 +161,10 @@ export default function ShegaLandingPage() {
                   <span>GLOBAL TALENT</span>
                 </div>
 
-                <h2 className="shega-contact-title kinetic-type">ARTISTS<br />FROM EVERYWHERE.</h2>
+                <h2 className="shega-contact-title kinetic-type">ROOTED IN ADDIS.<br />READY FOR THE WORLD.</h2>
 
                 <p className="shega-contact-subtext">
-                  From Addis Ababa to the world &mdash; we bring artists, DJs and performers
-                  together for moments that stay with the audience long after the lights go up.
+                  We bring artists, DJs and performers together for live experiences that stay with the audience long after the lights go up.
                 </p>
               </div>
 
