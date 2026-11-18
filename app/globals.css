@@ -873,8 +873,8 @@ button { border: 0; }
 .shega-allies-track { display: flex; width: max-content; animation: shega-allies-flow 24s linear infinite; }
 .shega-allies-marquee:hover .shega-allies-track { animation-play-state: paused; }
 .shega-allies-set { display: flex; flex: none; align-items: center; gap: clamp(70px, 11vw, 150px); padding-right: clamp(70px, 11vw, 150px); }
-.shega-ally-logo { display: grid; width: clamp(145px, 19vw, 220px); height: 74px; place-items: center; overflow: hidden; }
-.shega-ally-logo img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+.shega-ally-logo { display: grid; width: clamp(145px, 19vw, 220px); height: 74px; place-items: center; }
+.shega-ally-logo img { display: block; width: auto; height: auto; max-width: min(170px, 100%); max-height: 48px; object-fit: contain; }
 @keyframes shega-allies-flow { to { transform: translateX(-50%); } }
 
 .shega-dark-section { padding: clamp(52px, 7vw, 88px) var(--gutter); background: #080d0b; }
