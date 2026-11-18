@@ -277,6 +277,38 @@ button { border: 0; }
   position: relative;
 }
 
+.shega-hero-slider { position: relative; isolation: isolate; width: 100%; height: min(100svh, 920px); min-height: 560px; overflow: hidden; background: #090909; color: #fff; }
+.shega-hero-images, .shega-hero-shade { position: absolute; inset: 0; }
+.shega-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; opacity: 0; transform: scale(1.025); transition: opacity 900ms ease, transform 6s ease; }
+.shega-hero-image.is-active { opacity: 1; transform: scale(1); }
+.shega-hero-shade { z-index: 1; background: linear-gradient(180deg, rgba(7,7,10,.58), transparent 28%, rgba(7,7,10,.06) 48%, rgba(7,7,10,.73)); pointer-events: none; }
+.shega-hero-topline { position: absolute; z-index: 2; top: clamp(24px, 5vh, 48px); left: var(--gutter); right: var(--gutter); display: flex; align-items: center; justify-content: flex-end; gap: 24px; }
+.shega-hero-cta { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; padding: 0 8px 0 18px; border-radius: 999px; background: var(--orange); color: #fff; font-size: 12px; font-weight: 600; }
+.shega-hero-cta span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #fff; color: var(--orange); font-size: 17px; }
+.shega-hero-controls { display: flex; align-items: center; gap: 12px; padding: 5px 7px; border: 1px solid rgba(255,255,255,.55); border-radius: 999px; background: rgba(10,10,10,.32); backdrop-filter: blur(12px); }
+.shega-hero-controls button { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: transparent; color: #fff; font-size: 18px; }
+.shega-hero-controls button:hover { background: rgba(255,255,255,.16); }
+.shega-hero-controls span { font-size: 10px; letter-spacing: .08em; white-space: nowrap; }
+.shega-hero-controls i { margin: 0 4px; color: rgba(255,255,255,.55); font-style: normal; }
+.shega-hero-wordmark { position: absolute; z-index: 2; right: var(--gutter); bottom: clamp(25px, 5vh, 52px); left: var(--gutter); text-shadow: 0 3px 24px rgba(0,0,0,.24); }
+.shega-hero-wordmark > span { display: block; margin-bottom: 4px; font-size: clamp(17px, 2.4vw, 26px); font-weight: 500; }
+.shega-hero-wordmark h1 { display: flex; align-items: flex-start; font-size: clamp(48px, 11.1vw, 160px); font-weight: 900; line-height: .82; letter-spacing: -.075em; white-space: nowrap; }
+.shega-hero-wordmark sup { margin: .02em 0 0 .12em; font-size: .22em; line-height: 1; letter-spacing: 0; }
+.shega-hero-progress { position: absolute; z-index: 3; right: var(--gutter); bottom: 12px; left: var(--gutter); height: 2px; background: rgba(255,255,255,.32); }
+.shega-hero-progress span { display: block; width: 100%; height: 100%; transform-origin: left; background: var(--orange); animation: shega-hero-time 6s linear forwards; }
+@keyframes shega-hero-time { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 600px) {
+  .shega-hero-slider { height: min(88svh, 760px); min-height: 580px; }
+  .shega-hero-topline { top: 20px; flex-wrap: wrap; gap: 12px; }
+  .shega-hero-wordmark { bottom: 38px; }
+  .shega-hero-wordmark h1 { font-size: clamp(42px, 11vw, 72px); }
+  .shega-hero-controls { gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shega-hero-image { transform: none; transition: opacity 200ms linear; }
+  .shega-hero-progress span { animation: none; }
+}
+
 /* 2. ABOUT */
 .shega-about-section {
   background-color: #ffffff;

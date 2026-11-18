@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { ScrollStory } from "@/components/scroll-story";
+import { HeroSlider } from "@/components/hero-slider";
 import { Brand } from "@/components/brand";
 import Navbar from "@/components/Navbar";
 import { CONTACT_CHANNELS, CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
@@ -44,9 +44,9 @@ export default function ShegaLandingPage() {
   return (
     <main className="shega-page">
       <Navbar />
-      {/* 1. Hero — the scroll-driven Shega Website Video sequence. */}
+      {/* 1. Hero */}
       <section id="experience" className="shega-hero-slot" aria-label="Shega Events">
-        <ScrollStory />
+        <HeroSlider />
       </section>
 
       {/* 2. About */}
@@ -116,8 +116,8 @@ export default function ShegaLandingPage() {
               <div className="shega-allies-set" aria-hidden={copy === 1 ? "true" : undefined} key={copy}>
                 {[
                   ["Harar Beer", "/brand/partners/harar-beer.svg"],
-                  ["M-PESA", "/brand/partners/mpesa.svg"],
-                  ["Pepsi", "/brand/partners/pepsi.svg"],
+                  ["M-PESA", "/brand/partners/M-PESA_LOGO-01.svg.webp"],
+                  ["Pepsi", "/brand/partners/Pepsi_2023.svg.webp"],
                 ].map(([name, src]) => <span className="shega-ally-logo" key={name}><img src={src} alt={copy === 0 ? name : ""} /></span>)}
               </div>
             ))}
